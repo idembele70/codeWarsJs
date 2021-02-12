@@ -1,17 +1,13 @@
 document.body.style.backgroundColor = "black";
 document.body.style.color = "white";
 document.body.innerHTML = "white";
-let string = 'sak';
 
-function solution(number=10){
-    let resultat = 0 ;
-  for (let i = 1; i < number; i++) {
-      if (i % 3 == 0 || i % 5 == 0 ) {
-          resultat +=i;
-      }
-      
-  }
-  return resultat;
+function isValidWalk(walk = ['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']) {
+ const north  = walk.filter(item => {return item == 'n'}).length;
+ const south  = walk.filter(item => {return item == 's'}).length;
+ const east  = walk.filter(item => {return item == 'e'}).length;
+ const west  = walk.filter(item => {return item == 'w'}).length;
+
+ return walk.length == 10 && north == south && east == west;
 }
 
-solution();
