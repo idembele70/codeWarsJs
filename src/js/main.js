@@ -2,11 +2,10 @@
 // document.body.style.color = "white";
 // document.body.innerHTML = "white";
 
-function duplicateCount(text){
-    for (let i = 0; i < text.length; i++) {
-    if (text.charAt(i)==monVar) {
-       console.log('oui');
-    }
+function filter_list(l=[1,2,'a','b']){
+   return l.filter(function (v) {
+       return typeof v !== 'string';
+   });
   }
-  }
-  console.log(duplicateCount());
+
+  console.log(filter_list());
