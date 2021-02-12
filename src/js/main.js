@@ -1,15 +1,12 @@
-document.body.style.backgroundColor = "black";
-document.body.style.color = "white";
-document.body.innerHTML = "white";
-// function isPangram(string = "The quick brown fox jumps over the lazy dog."){
-// const reg = /[a-z]/gi;
-//    return reg.exec();
-// }
+// document.body.style.backgroundColor = "black";
+// document.body.style.color = "white";
+// document.body.innerHTML = "white";
 
-// console.log(isPangram());
-
-var re = /[0-9]+/g;
-var str = '2016-01-02';
-var resultat = re[Symbol.matchAll](str);
-
-console.log(Array.from(resultat, x => x[0]));
+function duplicateCount(text){
+    for (let i = 0; i < text.length; i++) {
+    if (text.charAt(i)==monVar) {
+       console.log('oui');
+    }
+  }
+  }
+  console.log(duplicateCount());
