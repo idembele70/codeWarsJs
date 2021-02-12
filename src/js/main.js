@@ -1,13 +1,9 @@
-document.body.style.backgroundColor = "black";
-document.body.style.color = "white";
-document.body.innerHTML = "white";
-
-function isValidWalk(walk = ['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']) {
- const north  = walk.filter(item => {return item == 'n'}).length;
- const south  = walk.filter(item => {return item == 's'}).length;
- const east  = walk.filter(item => {return item == 'e'}).length;
- const west  = walk.filter(item => {return item == 'w'}).length;
-
- return walk.length == 10 && north == south && east == west;
+function solution(number=10){
+    let result=0;
+    for (let i = 0; i < number; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            result +=i;
+        }
+    }
+    return result
 }
-
