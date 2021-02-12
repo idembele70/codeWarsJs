@@ -1,15 +1,15 @@
 document.body.style.backgroundColor = "black";
 document.body.style.color = "white";
 document.body.innerHTML = "white";
+// function isPangram(string = "The quick brown fox jumps over the lazy dog."){
+// const reg = /[a-z]/gi;
+//    return reg.exec();
+// }
 
-function isValidWalk(walk = ['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']) {
- const north  = walk.filter(item => {return item == 'n'}).length;
- const south  = walk.filter(item => {return item == 's'}).length;
- const east  = walk.filter(item => {return item == 'e'}).length;
- const west  = walk.filter(item => {return item == 'w'}).length;
+// console.log(isPangram());
 
- return walk.length == 10 && north == south && east == west;
-}
+var re = /[0-9]+/g;
+var str = '2016-01-02';
+var resultat = re[Symbol.matchAll](str);
 
-console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']));
-console.log(!isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']));
+console.log(Array.from(resultat, x => x[0]));
