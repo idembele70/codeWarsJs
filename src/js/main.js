@@ -1,10 +1,11 @@
-Array.prototype.filter = function (func) {
-  let res = [];
-  for (let i = 0; i < this.length; i++) {
-      if (func(this[i])) {
-          res.push(this[i])
-      }
+function solution(string='camelCaseRo') {
+  const regAZ = /[A-Z]/g; let result ='';
+for (let i = 0; i < string.length; i++) {
+  if (string.charAt(i).match(regAZ)) {
+    result +=  ' ' + string.charAt(i);
+    string = string.replace(string.charAt(i),result)
   }
-  return res;
 }
-console.log([1,2,3,4].filter((num)=>{return num > 3}))
+return string;
+}
+console.log(solution());
