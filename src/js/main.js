@@ -1,11 +1,15 @@
-function solution(string='camelCaseRo') {
-  const regAZ = /[A-Z]/g; let result ='';
-for (let i = 0; i < string.length; i++) {
-  if (string.charAt(i).match(regAZ)) {
-    result +=  ' ' + string.charAt(i);
-    string = string.replace(string.charAt(i),result)
+function solution(string='case Week GreatGroup') {
+  const delSpace = new RegExp(' ','g');
+  string = string.replace(delSpace,'');
+  const regAZ = /[A-Z]/g;
+  const letterUpercasse = string.match(regAZ);
+  if (letterUpercasse) {
+ return  string.split(' ');
+    for (let i = 0; i < letterUpercasse.length; i++) {
+      let addSpace = ' '+ letterUpercasse[i];
+      string = string.replace(letterUpercasse[i], addSpace);
+    }
   }
-}
-return string;
+  return string;
 }
 console.log(solution());
