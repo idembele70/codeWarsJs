@@ -13,3 +13,4 @@ function solution(string='case Week GreatGroup') {
   return string;
 }
 console.log(solution());
+
