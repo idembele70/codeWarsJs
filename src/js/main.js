@@ -1,18 +1,10 @@
-function digital_root(n = 493193) {
-  let resultat = 0, i = 0;
-  nLength = n.toString().length;
-  while (!!i <= nLength) {
-    n.toString().split('').forEach(element => {
-      resultat += parseInt(element);
-    });
-    n = resultat;
-    resultat = 0;
-    if (n.toString().length == 1) {
-      return n;
-    }
-    ++i;
-  }
+function digital_root(n = 43) {
+ if (n < 10)
+   return n;
+ for (var sum = 0, i = 0, n = String(n); i < n.length; i++)
+   sum += Number(n[i]);
 
+   return digital_root(sum);
 }
 
 console.log(digital_root());
