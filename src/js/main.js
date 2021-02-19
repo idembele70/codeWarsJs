@@ -1,5 +1,5 @@
-function solution(roman ='IV' ) {
-  let number = 0;
+function solution(roman = '') {
+  let number = 0; 
   roman.split('').forEach(element => {
     if (element === "M") {
       number += 1000
