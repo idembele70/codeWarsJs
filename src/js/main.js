@@ -1,27 +1,8 @@
 function sc(floor = 4) {
-  let voice = "";
-  if (floor > 1) {
-    for (let i = 0; i < floor; i++) {
-      if (floor <= 6) {
-        if (i + 1 === floor) {
-          voice += 'Pa! Aa!';
-        } else if (i + 1 !== floor) {
-          voice += 'Aa~ ';
-        };
-      } else {
-        if (floor > 6) {
-          if (i + 1 === floor) {
-            voice += 'Pa!';
-          } else {
-            voice += 'Aa~ ';
-          }
-        };
-      }
-    }
-  } else {
-    return "";
-  }
-  return voice;
+ if (floor <= 1) return ""; let voice = "";
+voice = 'Aa~ '.repeat(floor-1) + 'Pa!' ; 
+if (floor <= 6) voice += ' Aa!';
+return voice;
 }
 
 console.log(sc());
