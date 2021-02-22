@@ -1,16 +1,13 @@
-function solution(string='case Week GreatGroup') {
-  const delSpace = new RegExp(' ','g');
-  string = string.replace(delSpace,'');
-  const regAZ = /[A-Z]/g;
-  const letterUpercasse = string.match(regAZ);
-  if (letterUpercasse) {
- return  string.split(' ');
-    for (let i = 0; i < letterUpercasse.length; i++) {
-      let addSpace = ' '+ letterUpercasse[i];
-      string = string.replace(letterUpercasse[i], addSpace);
-    }
-  }
-  return string;
+
+
+function digital_root(n = 43) {
+ if (n < 10)
+   return n;
+ for (var sum = 0, i = 0, n = String(n); i < n.length; i++)
+   sum += Number(n[i]);
+
+   return digital_root(sum);
+  
 }
 console.log(solution());
 
