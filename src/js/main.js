@@ -1,8 +1,9 @@
-function sc(floor = 4) {
- if (floor <= 1) return ""; let voice = "";
-voice = 'Aa~ '.repeat(floor-1) + 'Pa!' ; 
-if (floor <= 6) voice += ' Aa!';
-return voice;
+function positiveSum(arr=[]) {
+return arr.reduce((acc,arr)=> acc + (arr > 0 ? arr: 0),0)
 }
-
-console.log(sc());
+console.log(positiveSum());
+console.log(positiveSum([1,2,3,4,5]));
+console.log(positiveSum([1,-2,3,4,5]));
+console.log(positiveSum([]));
+console.log(positiveSum([-1,-2,-3,-4,-5]));
+console.log(positiveSum([-1,2,3,4,-5]));
