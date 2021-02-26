@@ -1,9 +1,10 @@
-function positiveSum(arr=[]) {
-return arr.reduce((acc,arr)=> acc + (arr > 0 ? arr: 0),0)
+// complete the function
+function solution(string='camelCasingTCasing') {
+
+return  string.split(/([A-Z])/)
 }
-console.log(positiveSum());
-console.log(positiveSum([1,2,3,4,5]));
-console.log(positiveSum([1,-2,3,4,5]));
-console.log(positiveSum([]));
-console.log(positiveSum([-1,-2,-3,-4,-5]));
-console.log(positiveSum([-1,2,3,4,-5]));
+
+console.log(solution());
+
+// console.log(solution('camelCasing'));
+// console.log(solution('camelCasingTestC'));
