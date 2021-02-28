@@ -1,10 +1,13 @@
-class MyClass {
-     numberToString(num = 67) {
-        // Return a string of the number here!
-        return num.toString();
+class CenturyFromYear {
+    century(year=1705) {
+        // Finish this :)
+        let sum = 0;
+        for (let i = 0; i < year; i+=100) {
+            sum++
+            
+        }
+        return sum;
       }
 }
-
-myFirstClass = new MyClass;
-
-console.log((myFirstClass.numberToString()));
+MyFirstCentury = new CenturyFromYear;
+console.log(MyFirstCentury.century());
