@@ -1,20 +1,10 @@
-class ikd {
-     countSheeps(arrayOfSheep=[true,  true,  true,  false,
-        true,  true,  true,  true ,
-        true,  false, true,  false,
-        true,  false, false, true ,
-        true,  true,  true,  true ,
-        false, false, true,  true ]){
-  // TODO May the force be with you
-  let compteur =0;
-  for (let i = 0; i < arrayOfSheep.length; i++) {
-      if (arrayOfSheep[i]===true) {
-          compteur++
+class MyClass {
+     numberToString(num = 67) {
+        // Return a string of the number here!
+        return num.toString();
       }
-      
-  }
-  return compteur;
 }
-}
-let lh = new ikd;
-console.log(lh.countSheeps())
+
+myFirstClass = new MyClass;
+
+console.log((myFirstClass.numberToString()));
