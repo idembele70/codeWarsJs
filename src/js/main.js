@@ -1,25 +1,20 @@
-// complete the function
-function accum(s='abcd') {
-    const tabs = []; let compteur = -1;
-	 s.split('').forEach((element)=>{
-         compteur++
-        const elementLength = s.indexOf(element,compteur);
-        String(str=element.toUpperCase());
-        for (let i = 0; i < elementLength; i++) {
-        str+=element.toLowerCase();
-        }
-        
-        tabs.push(str);
-    });
-    return tabs.join('-');
-}
-//  console.log(accum());
+class SmallestIntegerFinder {
+    findSmallestInt(args=[78,56,232,12,8]) {
+       let med; 
+     for (const intr of args) {
+         if (Number.isInteger(med)) {
+             med = Math.min(med,intr);
+         } else {
+             med = intr;
+         }
+     }
+     return med;
+    }
+  }
 
-
-
-
-console.log(accum("ZpglnRxqenU"));
-// console.log(accum("NyffsGeyylB"));
-// console.log(accum("MjtkuBovqrU"));
-// console.log(accum("EvidjUnokmM"));
-// console.log(accum("HbideVbxncC"));
+  var sif = new SmallestIntegerFinder();
+  console.log((sif.findSmallestInt()));
+  console.log((sif.findSmallestInt([78,56,232,12,18])));
+  console.log((sif.findSmallestInt([78,56,232,412,228])));
+  console.log((sif.findSmallestInt([78,56,232,12,0])));
+  console.log((sif.findSmallestInt([1,56,232,12,8])));
