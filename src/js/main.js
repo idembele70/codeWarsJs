@@ -1,20 +1,20 @@
-class SmallestIntegerFinder {
-    findSmallestInt(args=[78,56,232,12,8]) {
-       let med; 
-     for (const intr of args) {
-         if (Number.isInteger(med)) {
-             med = Math.min(med,intr);
-         } else {
-             med = intr;
-         }
-     }
-     return med;
-    }
+class ikd {
+     countSheeps(arrayOfSheep=[true,  true,  true,  false,
+        true,  true,  true,  true ,
+        true,  false, true,  false,
+        true,  false, false, true ,
+        true,  true,  true,  true ,
+        false, false, true,  true ]){
+  // TODO May the force be with you
+  let compteur =0;
+  for (let i = 0; i < arrayOfSheep.length; i++) {
+      if (arrayOfSheep[i]===true) {
+          compteur++
+      }
+      
   }
-
-  var sif = new SmallestIntegerFinder();
-  console.log((sif.findSmallestInt()));
-  console.log((sif.findSmallestInt([78,56,232,12,18])));
-  console.log((sif.findSmallestInt([78,56,232,412,228])));
-  console.log((sif.findSmallestInt([78,56,232,12,0])));
-  console.log((sif.findSmallestInt([1,56,232,12,8])));
+  return compteur;
+}
+}
+let lh = new ikd;
+console.log(lh.countSheeps())
