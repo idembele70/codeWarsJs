@@ -1,13 +1,15 @@
-class CenturyFromYear {
-    century(year=1705) {
-        // Finish this :)
-        let sum = 0;
-        for (let i = 0; i < year; i+=100) {
-            sum++
-            
-        }
-        return sum;
-      }
+function basicOp(operation, value1, value2)
+{
+  const obj = {
+    '+' : value1 + value2,
+    '-' : value1 - value2,
+    '*' : value1 * value2,
+    '/' : value1 / value2, 
+  }
+  return obj[operation];
 }
-MyFirstCentury = new CenturyFromYear;
-console.log(MyFirstCentury.century());
+
+console.log(basicOp('+', 4, 7));
+console.log(basicOp('-', 15, 18),);
+console.log(basicOp('*', 5, 5));
+console.log(basicOp('/', 49, 7));
