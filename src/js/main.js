@@ -1,13 +1,14 @@
-function squareSum(numbers=[2,3,5]) {
-        let result = 0,i= 0;
-       while (i < numbers.length) {
-               result += Math.pow(numbers[i],2);
-               i++
-       }
-       return result;
-
+class Abbreviation {
+        abbrevName(name='Jason Mason'){
+                const AZ = new RegExp('[A-Z]','i')
+               return  name.split` `.join(x=>x.match(AZ))
+        }
 }
 
-console.log(squareSum([1,2]), 5)
-console.log(squareSum([0, 3, 4, 5]), 50)
-console.log(squareSum([-14,-9,0,-16,-18,-18,0,1]), 1182)
+const premierAbrreviation = new Abbreviation;
+
+console.log(premierAbrreviation.abbrevName("Sam Harris"), "S.H");
+console.log(premierAbrreviation.abbrevName("Patrick Feenan"), "P.F");
+console.log(premierAbrreviation.abbrevName("Evan Cole"), "E.C");
+console.log(premierAbrreviation.abbrevName("P Favuzzi"), "P.F");
+console.log(premierAbrreviation.abbrevName("David Mendieta"), "D.M");
