@@ -1,9 +1,9 @@
-class digit {
-     digitize(n=123435) {
-        return n.toString().split('').map(x => parseInt(x)).reverse();
+function paperwork(n=5,m=5) {
+        if (n < 0 || m < 0) {
+                return 0;
+        } else {
+                 return n*m;
         }
 }
 
-const monDigit = new digit;
-
-console.log(monDigit.digitize())
+console.log(paperwork());
