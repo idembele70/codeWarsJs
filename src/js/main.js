@@ -1,4 +1,7 @@
-function paperwork(n=5,m=5) {
+class reversemode {
+        reverseWord(str="hello world!"){
+              return  str.split(' ').reverse().join(' ')
+        }
 }
 
-console.log(paperwork());
+console.log(new reversemode().reverseWord());
