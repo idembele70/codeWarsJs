@@ -1,5 +1,12 @@
 function squareSum(numbers=[2,3,5]) {
-        return numbers.reduce((acc,i)=>{return acc+= Math.pow(i,2)},0)
+        let result = 0;
+        for (let i = 0; i < numbers.length; i++) {
+                result += numbers[i]*numbers[i];
+                  if (i+1 === numbers.length) {
+                          return result
+                  }
+        }
+        // return result
 
 }
 
