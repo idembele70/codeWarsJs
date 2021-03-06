@@ -1,9 +1,6 @@
 const abbrevName = (name="ibrahim Dembele") =>{
-        let result ="";
-       name = name.split(' ').forEach(element => {
-              result+= element[0].toUpperCase();
-       });;
-       return result.split('').join('.') ;
+        return name.split(' ').map(x => {return x[0].toUpperCase()}).join('.');
+
 }
 
 console.log(abbrevName("eliza doolittle"), "E.D"); // BASIC
