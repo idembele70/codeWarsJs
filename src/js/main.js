@@ -1,7 +1,15 @@
-function greet(name, owner) {
-        if (name === owner) return 'Hello boss'; 
-        else return  'Hello guest';
+const abbrevName = (name="ibrahim Dembele") =>{
+        let result ="";
+       name = name.split(' ').forEach(element => {
+              result+= element[0].toUpperCase();
+       });;
+       return result.split('').join('.') ;
 }
 
-console.log(greet('Daniel', 'Daniel'))
-console.log(greet('Greg', 'Daniel'))
+console.log(abbrevName("eliza doolittle"), "E.D"); // BASIC
+
+console.log(abbrevName("Sam Harris"), "S.H");
+console.log(abbrevName("Patrick Feenan"), "P.F");
+console.log(abbrevName("Evan Cole"), "E.C");
+console.log(abbrevName("P Favuzzi"), "P.F");
+console.log(abbrevName("David Mendieta"), "D.M");
