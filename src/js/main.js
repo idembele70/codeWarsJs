@@ -19,10 +19,12 @@ console.log((Myremove.remove("Hi")) , "resultat : Hi"); */
 
 // 
 
-const cockroachSpeed = function(s){
-    return ~~(s/3.6*100);
-}
+console.log(
+   ( (haystack= ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false])=>{
+        return haystack.map(x =>  x === 'needle' ? "Found the needle at position " + haystack.indexOf(x) : "").join('');
+    })()
+);
 
-console.log(cockroachSpeed(1.08), 30);
-console.log(cockroachSpeed(1.09), 30);
-console.log(cockroachSpeed(0), 0);
+// les deux paire false
+// si un des deux impaire true
+// les deux pas paire true
