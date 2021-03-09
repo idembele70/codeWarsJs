@@ -1,14 +1,17 @@
-
-const countPositivesSumNegatives = (input=[]) =>{
-  let sumNegative = null, sumPositive = null;
-if (input !== null) {
-  return input;
-} else {
-  input.forEach(el => el <= 0 ? sumNegative += el : sumPositive ++);
+function findOdd(A=[20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]) {
+  let nombre = 0, compteur = 0;
+  for (let i = 0; i < A.length; i++) {
+    let compteur = 0;
+    for (let j = 0; j < A.length; j++) {
+      if (A[i] === A[j]){
+       compteur++
+      }
+    }
+    if (compteur %2 !== 0) {
+      nombre = A[i]
+    }
+  }
+  return nombre
 }
-return [sumPositive, sumPositive];
-}
 
-console.log(countPositivesSumNegatives());
-/* console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
-console.log(countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14])); */
+console.log(findOdd());
