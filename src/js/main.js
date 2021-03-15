@@ -1,4 +1,6 @@
 const stringToNumber = (str="-1234")=>{
-  return parseInt(str);
+ if (!Number.isInteger(str)) {
+   return parseInt(str)
+ }
 }
 console.log(stringToNumber());
