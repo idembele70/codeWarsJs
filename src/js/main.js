@@ -1,6 +1,8 @@
-
-function maps(x=[1, 2, 3]) {
-  return x.map(val => val * 2);
+class Kuy {
+  invert (array=[1,2,-4]){
+    return array.map(x => -x);
+  }
 }
 
-console.log(maps());
+const maKuy = new Kuy;
+console.log(maKuy.invert());
