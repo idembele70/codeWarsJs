@@ -1,5 +1,5 @@
 function noSpace(x="Salut l'equipe") {
-return x.split(' ').join``;
+return x.replace(/ /g, '');
 }
 
 console.log(noSpace());
