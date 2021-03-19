@@ -1,8 +1,12 @@
 class Bool {
-  constructor(){
+  constructor() {
   }
-  boolToWord(bool=false){
-    return bool === true ? 'Yes' : 'No';
+  boolToWord(bool = false) {
+    if (bool === true) {
+      return 'Yes';
+    } else {
+      return 'No';
+    }
   }
 }
 
