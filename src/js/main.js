@@ -1,5 +1,10 @@
-function noSpace(x="Salut l'equipe") {
-return x.replace(/ /g, '');
+class Bool {
+  constructor(){
+  }
+  boolToWord(bool=false){
+    return bool === true ? 'Yes' : 'No';
+  }
 }
 
-console.log(noSpace());
+const bool = new Bool().boolToWord();
+console.log(bool);
