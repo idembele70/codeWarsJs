@@ -1,9 +1,5 @@
-const sumnation = function(num=3){
-  let acc = null;
-for (let i = 1; i < num; i++) {
-  acc+=i
-}
-return acc
+function noSpace(x="Salut l'equipe") {
+return x.split(' ').join``;
 }
 
-console.log(sumnation());
+console.log(noSpace());
