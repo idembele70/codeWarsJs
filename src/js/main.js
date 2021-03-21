@@ -1,8 +1,7 @@
-function countPositivesSumNegatives(input=[]) {
-
-let sumNegative = 0, sumPositive = 0;
-if(input !== null && input.length !=0){input.forEach(el => el <= 0 ? sumNegative+= el : sumPositive++ )
-return [sumPositive, sumNegative];} 
-  else return [];
+class Map {
+  maps(x=[1, 2, 3]){
+ return  x.map(el => el * 2);
+  }
 }
-console.log(countPositivesSumNegatives());
+const map = new Map();
+console.log(map.maps()); 
