@@ -1,11 +1,9 @@
-class Map {
-  maps(x = [1, 2, 3]) {
-    const mapsed = [];
-    for (let value of x) {
-     x. value *= 2;
-    }
-    return x
-  }
+function fakeBin(x='45385593107843568') {
+    let strToBin = '';
+    x.split('').forEach(element => {
+       strToBin += element < 5 ? 0 : 1;
+   });
+   return strToBin
 }
-const map = new Map();
-console.log(map.maps());
+
+console.log(fakeBin());
