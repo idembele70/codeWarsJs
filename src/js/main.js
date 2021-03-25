@@ -1,13 +1,7 @@
 function fakeBin(x='45385593107843568') {
-    xToBin = ''
- for (let i = 0; i < x.length; i++) {
-     if (x[i] < 5) {
-       xToBin += 0;
-    } else {
-        xToBin += 1;
-     }
-    }
-    return xToBin;
+ x = x.replace(/[0-4]/g,0);
+ x = x.replace(/[5-9]/g,1);
+  return x
 }
 
 console.log(fakeBin());
