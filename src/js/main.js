@@ -1,16 +1,13 @@
-/* 
-__ beginner series #2 Clock 
-*/
-
-
-const past = (h = 0, m = 1, s = 1) => {
-    const hourToSecondes = h * 3600,
-        minuteToSecondes = m * 60,
-        seconde = s,
-        secondeToMilliseconde = 1000;
-    return (hourToSecondes + minuteToSecondes + seconde) * secondeToMilliseconde;
+class Point {
+  static points(games=['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3']){
+      let point = 0;
+         games.forEach(matchPoint => {
+            return matchPoint.split(/:/)[0] > matchPoint.split(/:/)[1]
+            ? point +=3 : matchPoint.split(/:/)[0] == matchPoint.split(/:/)[1]
+            ? point += 1 : point += 0;
+        })
+        return point;
+    }
 }
 
-console.log(past());
-console.log(past(1, 0, 1));
-
+console.log(Point.points());
