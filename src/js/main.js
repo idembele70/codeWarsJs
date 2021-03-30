@@ -1,7 +1,12 @@
-function fakeBin(x='45385593107843568') {
- x = x.replace(/[0-4]/g,0);
- x = x.replace(/[5-9]/g,1);
-  return x
+/* 
+__ beginner series #2 Clock 
+*/
+
+
+const past = (h = 0, m = 1, s = 1) => {
+    return (h * 3600 + m * 60 + s) * 1000;
 }
 
-console.log(fakeBin());
+console.log(past());
+console.log(past(1, 0, 1));
+
