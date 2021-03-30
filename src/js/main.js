@@ -1,9 +1,9 @@
-const getAverage = function (marks = [2, 2, 2, 2]) {
-    let result = null;
-    for (const note of marks) {
-       result += note;
+const monkeyCount = (n=5) =>{
+    const tabsMonkey = [];
+    for (let i = 1; i <= n; i++) {
+        tabsMonkey.push(i);
     }
-    return  Math.floor(result / marks.length);
+    return tabsMonkey;
 }
-console.log(getAverage());
-console.log(getAverage([1, 2, 3, 4, 5,]));
+
+console.log(monkeyCount());
