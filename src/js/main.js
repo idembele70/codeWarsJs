@@ -1,9 +1,5 @@
-_ = (n = 5) => {
-  const tabs = [];
-  for (let i = 1; i <= n; i++) {
-    tabs.unshift(i);
-  }
-  return tabs;
+function bonusTime(salary=10000, bonus=true) {
+  return (bonus ? '£'+salary * 10 : '£'+salary);
 }
 
-console.log(_());
+console.log(bonusTime());
