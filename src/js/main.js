@@ -1,5 +1,9 @@
 function bonusTime(salary=10000, bonus=true) {
-  return (bonus ? '£'+salary * 10 : '£'+salary);
+  if (bonus) {
+    return '£'+salary * 10 ;
+  } else {
+    return '£'+salary;
+  }
 }
 
 console.log(bonusTime());
