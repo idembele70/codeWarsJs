@@ -1,9 +1,7 @@
-function bonusTime(salary=10000, bonus=true) {
-  if (bonus) {
-    return '£'+salary * 10 ;
-  } else {
-    return '£'+salary;
+class Average {
+  static find_average(array = [1, 1, 1]) {
+    return array.reduce((a, u)=>a+=u) / array.length;
   }
 }
 
-console.log(bonusTime());
+console.log(Average.find_average());
