@@ -1,6 +1,10 @@
 class Average {
   static find_average(array = [1, 1, 1]) {
-    return array.reduce((a, u)=>a+=u) / array.length;
+    let sum = 0
+    for (const i of array) {
+      sum +=i
+    }
+    return sum / array.length;
   }
 }
 
