@@ -1,9 +1,9 @@
-const monkeyCount = (n=5) =>{
-    const tabsMonkey = [];
-    for (let i = 1; i <= n; i++) {
-        tabsMonkey.push(i);
-    }
-    return tabsMonkey;
+_ = (n = 5) => {
+  const tabs = [];
+  for (let i = 1; i <= n; i++) {
+    tabs.unshift(i);
+  }
+  return tabs;
 }
 
-console.log(monkeyCount());
+console.log(_());
