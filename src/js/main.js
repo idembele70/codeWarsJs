@@ -1,27 +1,20 @@
-function sc(floor = 4) {
-  let voice = "";
-  if (floor > 1) {
-    for (let i = 0; i < floor; i++) {
-      if (floor <= 6) {
-        if (i + 1 === floor) {
-          voice += 'Pa! Aa!';
-        } else if (i + 1 !== floor) {
-          voice += 'Aa~ ';
-        };
-      } else {
-        if (floor > 6) {
-          if (i + 1 === floor) {
-            voice += 'Pa!';
-          } else {
-            voice += 'Aa~ ';
-          }
-        };
-      }
-    }
-  } else {
-    return "";
-  }
-  return voice;
-}
+function rps(p1 = "rock", p2 = 'scissors') {
+  switch (p1 + p2) {
+    case "scissorspaper":
+      return getMsg(1);
+    case "paperscissors":
+      return getMsg(2);
+    case "paperrock":
+      return getMsg(1);
+    case "rockpaper":
+      return getMsg(2);
+    case "rockscissors":
+      return getMsg(1);
+    case "scissorsrock":
+      return getMsg(2);
 
-console.log(sc());
+    default: return "Draw!"
+  }
+}
+const getMsg = (n) => `Player ${n} won!`;
+console.log(rps(p1 = "paper", p2 = "scissors"));
