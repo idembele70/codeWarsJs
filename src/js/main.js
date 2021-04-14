@@ -1,11 +1,7 @@
-class Average {
-  static find_average(array = [1, 1, 1]) {
-    let sum = 0
-    for (const i of array) {
-      sum +=i
-    }
-    return sum / array.length;
+class Array {
+  static arrayPlusArray(arr = [1, 2, 3], arr2 = [4, 5, 6]) {
+    return arr.reduce((acc, v) => acc += v) + arr2.reduce((acc, v) => acc += v);
   }
 }
 
-console.log(Average.find_average());
+console.log(Array.arrayPlusArray());
