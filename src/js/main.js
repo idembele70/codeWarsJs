@@ -1,9 +1,9 @@
-const grow = function (x = [1, 2, 3]) {
-  let res =0;
-  for (let a = 0; a < x.length; a++) {
-    res *= x[a]
-    if (a + 1 == x.length) return res;
-  }
+function min(list=[-52, 56, 30, 29, -54, 0, -110]){
+  return Math.min(...list);
+}
+function max(list=[-52, 56, 30, 29, -54, 0, -110]){
+  return Math.max(...list);
 }
 
-console.log(grow());
+console.log(min());
+console.log(max());
