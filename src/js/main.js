@@ -1,21 +1,6 @@
-class FindIt {
-  static firstNonConsecutive(arr = [9, 10, 11, 12, 13, 14, 15, 16, 17]) {
-    let pre = 'str', finalVal = true;
-    for (let i = 0; i < arr.length; i++) {
-      if (pre == 'str') {
-        pre = arr[i];
-        continue
-      } else if (pre != arr[i]-1) {
-        pre = arr[i];
-        finalVal = false;
-        break;
-      } else {
-        pre = arr[i]
-        continue
-      }
-    }
-    return finalVal ? null : pre
-  }
+const lowercaseCount = (str="abc") => {
+  const strTab = str.match(/[a-z]/g)
+  return !strTab ? 0 : strTab.length
 }
 
-console.log(FindIt.firstNonConsecutive());
+console.log(lowercaseCount());
