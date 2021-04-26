@@ -1,6 +1,11 @@
-const lowercaseCount = (str="abc") => {
-  const strTab = str.match(/[a-z]/g)
-  return !strTab ? 0 : strTab.length
+class Num {
+  digit(params) {
+    
+  }
 }
 
-console.log(lowercaseCount());
+String.prototype.digit = function(){
+  return this.length == 1 && this.match(/\d/) ? true : false;
+}
+
+console.log("22".digit(2));
