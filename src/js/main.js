@@ -1,11 +1,10 @@
-class Num {
-  digit(params) {
-    
+function ValidateUsr(username="ass") {
+  const res = new RegExp('[a-z]|_|\\d','g');
+  if (username) {
+   return username.match(res).length == username.length && 4<=username.length<=16;
+  } else {
+    return false
   }
 }
 
-String.prototype.digit = function(){
-  return this.length == 1 && this.match(/\d/) ? true : false;
-}
-
-console.log("22".digit(2));
+console.log(ValidateUsr());
