@@ -1,8 +1,6 @@
-function isLockNessMonster(s) {
-  const reg = new RegExp("tree fiddy|3.50");
-  return reg.test(s)
+const array = (arr = '1,2,3') => {
+ const newarr = arr.toString();
+  return newarr.match(/,{2,}/g) && newarr.match(/,/g).length >=2 ? newarr.split(/,/).slice(1,-1).join` ` : null ;
 }
 
-console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy"));
-console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to 3.50"));
-console.log(isLockNessMonster("Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."));
+console.log(array());
