@@ -1,11 +1,9 @@
-function logicalCalc(array = [true, true], op = "AND") {
-  if (op == "AND") {
-    return eval(array.join` && `);
-  } else if (op == "OR") {
-    return eval(array.join` |`);
-  } else if (op = "XOR") {
-    return eval(array.join`^`);
-  }
-}
+const zerofuel = (distanceToPump, mpg, fuelLeft) => {
 
-console.log(logicalCalc());
+  if (mpg * fuelLeft >= distanceToPump) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
