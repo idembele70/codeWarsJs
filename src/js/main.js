@@ -1,23 +1,15 @@
-/* function logicalCalc(array = [true, true, true, false], op = "AND") {
-
-  switch (op) {
-    case "AND":
-      array.join` `.match(/false/);
-      return true
-    case "XOR":
-    case "OR":
-      array.match(/true/);
-      return true
-
-    default:
-      return "Your operator doesn't exist !"
+function logicalCalc(array = [true, true], op = "AND") {
+  let res = Boolean();
+  for (let i = 0; i < array.length; i++) {
+    if (op == "AND") {
+      return eval(array.join` && `);
+    } else if (op == "OR") {
+      return eval(array.join` |`);
+    } else if (op = "XOR") {
+      return eval(array.join`^`);
+    }
   }
+  return false;
 }
 
-console.log(logicalCalc()); */
-
-function distanceBetweenPoints(a = { x: 3, y: 3 }, b = { x: 3, y: 3 }) {
-  return Math.hypot(a.x - b.x, a.y - b.y)
-}
-
-console.log(distanceBetweenPoints());
+console.log(logicalCalc());
