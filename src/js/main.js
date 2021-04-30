@@ -1,9 +1,5 @@
-const zerofuel = (distanceToPump, mpg, fuelLeft) => {
-
-  if (mpg * fuelLeft >= distanceToPump) {
-    return true;
-  } else {
-    return false;
-  }
-
+function take(arr=[],n=1) {
+  return arr.slice(0,n)
 }
+
+console.log(take([0, 1, 2, 3, 5, 8, 13], 3));
