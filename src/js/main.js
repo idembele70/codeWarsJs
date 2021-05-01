@@ -1,15 +1,5 @@
-function take(arr = [], n = 1) {
-  let tabs = []
-  console.log(arr)
-if(arr == null)return tabs;
-else
-{
-for (let i = 0; i < n; i++) {
-  if(arr[i] != undefined)
-  tabs.push(arr[i]);
+function sortBytes(uint32 = 3735928559) {
+  const arrUint32 = uint32.toString(2).padStart(32, 0).split('').map((x, i) => (i + 1) % 8 == 0 && i != 0 ? x += " " : x).join``.trim().split(' ').sort((a,b)=>b-a).join``;
+  return  parseInt(arrUint32,2)
 }
-return tabs
-}
-}
-
-console.log(take([0, 1, 2, 3, 5, 8, 13], 3));
+console.log(sortBytes());
