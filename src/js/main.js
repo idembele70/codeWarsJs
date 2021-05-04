@@ -1,13 +1,4 @@
-function vowelIndices(word = "orange") {
-  const vowIndices = [];
-  for (let i = 0; i < word.length; i++) {
-    const char = word.charAt(i);
-    if (char.match(/[aeyuio]/i)) {
-      vowIndices.push(++i)
-      i--
-    }
-  }
-
-  return vowIndices;
+function reverseBit(n=417) {
+  return parseInt(n.toString(2).split('').reverse().join``,2)
 }
-console.log(vowelIndices());
+console.log(reverseBit());
