@@ -1,5 +1,5 @@
 const validSpacing = (s = "K  World") => {
-  return !(/^ /.test(s) || / $/.test(s) || / {2,}/.test(s))
+  return !s.match`^ | $| {2,}`
 }
 
 console.log(validSpacing());
