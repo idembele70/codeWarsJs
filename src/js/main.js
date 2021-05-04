@@ -1,9 +1,16 @@
-function factorial(n = 4) {
-  let factorialOfN = 1;
-  for (let i = 1; i <= n; i++) {
-    factorialOfN *= i;
-  }
-  return factorialOfN;
-}
+function cleanString(s = "abc#d##c") {
+  const cleanedString = [];
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] == "#") {
+      if (cleanedString == "") {
 
-console.log(factorial());
+      } else {
+        cleanedString.pop()
+      }
+    } else {
+      cleanedString.push(s[i])
+    }
+  }
+  return cleanedString.join``;
+}
+console.log(cleanString());
