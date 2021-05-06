@@ -1,17 +1,9 @@
-function solve(arr = ["abode", "ABc", "xyzD"]) {
-  const symetryTabs = []; let currIndex = 0;
-  for (const alphabetString of arr) {
-    symetryTabs.push(0)
-    for (let i = 0; i < alphabetString.length; i++) {
-      const character = alphabetString[i].toLowerCase();
-      const charPosition = character.charCodeAt(0) - 97;
-      if (charPosition === i) {
-        symetryTabs[currIndex]++;
-      }
-    }
-    currIndex++
-  }
-  return symetryTabs
+const nBonacciRatio = (n = 1) => {
+  if (n == 0) {
+    return 0
+  } else if (n == 1) {
+    return 1
+  } else
+    return parseInt(n * (n - nBonacciRatio(n - 1)) + (n - nBonacciRatio(n - 2))).toFixed(8)
 }
-
-console.log(solve());
+console.log(nBonacciRatio());
