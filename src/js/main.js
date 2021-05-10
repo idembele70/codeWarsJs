@@ -1,12 +1,9 @@
-const nBonacciRatio = (n = 7) => {
-  if (n == 0) {
-    return 0
-  } else if (n == 1) {
-    return (1)
-  } else {
-    const tabs = [0, 1,2,3,4];
-    return 81/44
+function multiTable(number = 5) {
+  let res = '';
+  for (let i = 1; i <= 10; ++i) {
+    if (res == '') res += i + ' * ' + number + ' = ' + number * i;
+    else res += '\n' + i + ' * ' + number + ' = ' + number * i;
   }
-
+  return res
 }
-console.log(nBonacciRatio());
+console.log(multiTable());
