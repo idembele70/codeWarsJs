@@ -1,4 +1,4 @@
-const getPositions = (s = 55) => {
+/* const getPositions = (s = 55) => {
   const handsUpTabs = { P1: 0, P2: 0, P3: 0 };
   let step = 0;
   for (let i = 0; i < s; i++) {
@@ -31,3 +31,11 @@ const getPositions = (s = 55) => {
 };
 
 getPositions();
+ */
+
+function findOdd(A=[20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]) {
+  let res ='';
+   A.forEach(number => A.join` `.match(number).length == 1 ? res = number : 0);
+  return res;
+}
+console.log(findOdd());
