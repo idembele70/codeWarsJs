@@ -32,8 +32,9 @@
 
 getPositions();
  */
-function largestPairSum(numbers=[10,14,2,23,19]) {
-  const numbersSorted = numbers.sort((a,b)=>a-b)
-  return(numbersSorted[numbers.length-1]+numbersSorted[numbers.length-2])
+const shorter_reverse_longer = (a="first",b= "abcde") => {
+  return a.length >= b.length ? shorter(b,a) : shorter(a,b);
 }
-console.log(largestPairSum());
+function shorter(shortest,longest) {
+  return shortest +(longest.split('').reverse().join``)+shortest
+}
