@@ -32,9 +32,9 @@
 
 getPositions();
  */
-const shorter_reverse_longer = (a="first",b= "abcde") => {
-  return a.length >= b.length ? shorter(b,a) : shorter(a,b);
+function removeExclamationMarks(s="hello World!") {
+s = [...s];
+  for(let i =0; i < s.length;i++){if(s[i] == '!')s[i]='';}
+  return s.join``;
 }
-function shorter(shortest,longest) {
-  return shortest +(longest.split('').reverse().join``)+shortest
-}
+console.log(removeExclamationMarks());
