@@ -32,10 +32,8 @@
 
 getPositions();
  */
-
-function findOdd(A=[20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]) {
-  let res ='';
-   A.forEach(number => A.join` `.match(number).length == 1 ? res = number : 0);
-  return res;
+function largestPairSum(numbers=[10,14,2,23,19]) {
+  const numbersSorted = numbers.sort((a,b)=>a-b)
+  return(numbersSorted[numbers.length-1]+numbersSorted[numbers.length-2])
 }
-console.log(findOdd());
+console.log(largestPairSum());
