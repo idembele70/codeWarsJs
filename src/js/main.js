@@ -32,9 +32,12 @@
 
 getPositions();
  */
-function removeExclamationMarks(s="hello World!") {
-s = [...s];
-  for(let i =0; i < s.length;i++){if(s[i] == '!')s[i]='';}
-  return s.join``;
+function squareDigits(num = 3212) {
+  num = num.toString().split("");
+  const sum = [];
+  for (const letter of num) {
+    sum.push((letter ** 2));
+  }
+  return parseInt(sum.join``);
 }
-console.log(removeExclamationMarks());
+console.log(squareDigits());
