@@ -32,12 +32,11 @@
 
 getPositions();
  */
-function squareDigits(num = 3212) {
-  num = num.toString().split("");
-  const sum = [];
-  for (const letter of num) {
-    sum.push((letter ** 2));
-  }
-  return parseInt(sum.join``);
+function getMiddle(s = "test") {
+  const { length } = s;
+  return (length % 2 == 0
+    ? s.split("").slice(length / 2 - 1, length / 2 + 1)
+    : s.slice(length / 2, length / 2 + 1)).join``;
 }
-console.log(squareDigits());
+
+console.log(getMiddle());
