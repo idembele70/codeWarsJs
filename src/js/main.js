@@ -32,11 +32,8 @@
 
 getPositions();
  */
-function getMiddle(s = "test") {
-  const { length } = s;
-  return (length % 2 == 0
-    ? s.split("").slice(length / 2 - 1, length / 2 + 1)
-    : s.slice(length / 2, length / 2 + 1)).join``;
-}
-
-console.log(getMiddle());
+console.log(
+  ((n = 25) => {
+    return Number.isInteger(Math.sqrt(n));
+  })()
+);
