@@ -32,8 +32,14 @@
 
 getPositions();
  */
-console.log(
-  ((n = 25) => {
-    return Number.isInteger(Math.sqrt(n));
-  })()
-);
+function findShort(s = "bitcoin take over the world maybe who knows perhaps") {
+  s = s.split(" ");
+  let minLength = s[0].length;
+  for (const word of s) {
+    const { length } = word;
+    if (length < minLength) minLength = length;
+  }
+  return minLength;
+}
+
+console.log(findShort());
