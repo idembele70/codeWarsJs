@@ -32,14 +32,14 @@
 
 getPositions();
  */
-function findShort(s = "bitcoin take over the world maybe who knows perhaps") {
-  s = s.split(" ");
-  let minLength = s[0].length;
-  for (const word of s) {
-    const { length } = word;
-    if (length < minLength) minLength = length;
+function getSum(a=1,b=0) {
+  const min = Math.min(a,b)
+  const max = Math.max(a,b)
+  let sum = 0;
+  for (let i = min; i <= max; i++) {
+    sum+=i
+    
   }
-  return minLength;
+  return sum;
 }
-
-console.log(findShort());
+console.log(getSum());
