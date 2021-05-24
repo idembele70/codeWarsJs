@@ -32,14 +32,19 @@
 
 getPositions();
  */
-function getSum(a=1,b=0) {
-  const min = Math.min(a,b)
-  const max = Math.max(a,b)
-  let sum = 0;
-  for (let i = min; i <= max; i++) {
-    sum+=i
-    
+String.prototype.toJadenCase = function () {
+  const str = this.split(" ");
+  const { length } = str;
+  let strNew = "";
+
+  for (let i = 0; i < length; i++) {
+    const currentWord = str[i];
+    for (let i = 0; i < currentWord.length; i++) {
+      if (i == 0) strNew += currentWord[i].toUpperCase();
+      else strNew+= currentWord[i]
+    }
+    strNew += " ";
   }
-  return sum;
-}
-console.log(getSum());
+  return strNew.trim();
+};
+console.log("i Watch Twilight Every Night".toJadenCase());
