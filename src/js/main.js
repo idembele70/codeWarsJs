@@ -32,19 +32,15 @@
 
 getPositions();
  */
-String.prototype.toJadenCase = function () {
-  const str = this.split(" ");
-  const { length } = str;
-  let strNew = "";
-
-  for (let i = 0; i < length; i++) {
-    const currentWord = str[i];
-    for (let i = 0; i < currentWord.length; i++) {
-      if (i == 0) strNew += currentWord[i].toUpperCase();
-      else strNew+= currentWord[i]
+const longest = function (s1="aba", s2="bcb") {
+  const str =s1.concat(s2);
+  let newStr = []
+  for(let i = 0; i < str.length; i++){
+    if(!newStr.includes(str[i])){
+      newStr.push(str[i])
     }
-    strNew += " ";
   }
-  return strNew.trim();
+  return newStr.sort().join``
 };
-console.log("i Watch Twilight Every Night".toJadenCase());
+
+console.log(longest()); 
