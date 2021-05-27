@@ -32,15 +32,29 @@
 
 getPositions();
  */
-const longest = function (s1="aba", s2="bcb") {
-  const str =s1.concat(s2);
-  let newStr = []
-  for(let i = 0; i < str.length; i++){
-    if(!newStr.includes(str[i])){
-      newStr.push(str[i])
-    }
-  }
-  return newStr.sort().join``
-};
 
-console.log(longest()); 
+function rowSumOddNumbers(n = 1) {
+  const passed = Array(n + 1)
+      .toString()
+      .split("")
+      .map((x, i) => (x = i))
+      .reduce((acc, curr) => (acc += curr)),
+    oddTabs = [],
+    oddTabsMaxLength = n;
+  let oddCount = 0,
+    i = 1;
+  while (true) {
+    if (i % 2 !== 0) {
+      if (passed <= oddCount) {
+        oddTabs.push(i);
+        if (oddTabsMaxLength == oddTabs.length) {
+          break;
+        }
+      }
+      oddCount++;
+    }
+    i++;
+  }
+  return oddTabs.reduce((acc, curr) => (acc += curr));
+}
+console.log(rowSumOddNumbers(4));
