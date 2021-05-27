@@ -33,28 +33,8 @@
 getPositions();
  */
 
-function rowSumOddNumbers(n = 1) {
-  const passed = Array(n + 1)
-      .toString()
-      .split("")
-      .map((x, i) => (x = i))
-      .reduce((acc, curr) => (acc += curr)),
-    oddTabs = [],
-    oddTabsMaxLength = n;
-  let oddCount = 0,
-    i = 1;
-  while (true) {
-    if (i % 2 !== 0) {
-      if (passed <= oddCount) {
-        oddTabs.push(i);
-        if (oddTabsMaxLength == oddTabs.length) {
-          break;
-        }
-      }
-      oddCount++;
-    }
-    i++;
-  }
-  return oddTabs.reduce((acc, curr) => (acc += curr));
+function solution(str="abc",ending="bc") {
+  return [...str].slice(str.length - ending.length).join`` === ending
 }
-console.log(rowSumOddNumbers(4));
+
+console.log(solution());
