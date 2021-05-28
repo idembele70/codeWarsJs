@@ -33,8 +33,12 @@
 getPositions();
  */
 
-function solution(str="abc",ending="bc") {
-  return [...str].slice(str.length - ending.length).join`` === ending
+function oddOrEven(array = [1]) {
+  let sum = 0;
+  if (array.length) {
+    array.forEach((currentItem) => (sum += currentItem));
+  }
+  return sum % 2 == 0 ? "even" : "odd";
 }
 
-console.log(solution());
+console.log(oddOrEven());
