@@ -33,16 +33,7 @@
 getPositions();
  */
 
-function maskify(cc = "45") {
-  const lastLetterIndex = cc.length - 4;
-  let newstr = "";
-  let i = 0;
-  if (!cc.length <= 4)
-    while (lastLetterIndex > i) {
-      newstr += "#";
-      i++
-    };
-  return newstr.concat(cc.substring(lastLetterIndex));
-}
-
-console.log(maskify());
+console.log(function printerError(s="aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz") {
+  const {length} = s;
+  return length - +s.match(/[a-m]/g).length + "/"+length
+}())
