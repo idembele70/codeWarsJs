@@ -33,7 +33,10 @@
 getPositions();
  */
 
-console.log(function printerError(s="aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz") {
-  const {length} = s;
-  return length - +s.match(/[a-m]/g).length + "/"+length
-}())
+console.log(
+  (function printerError(
+    s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"
+  ) {
+    return s.length - [...s].filter(curr=>curr.match(/[a-m]/)).length + "/"+s.length
+  })()
+);
