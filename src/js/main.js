@@ -33,12 +33,10 @@
 getPositions();
  */
 
-function oddOrEven(array = [1]) {
-  let sum = 0;
-  if (array.length) {
-    array.forEach((currentItem) => (sum += currentItem));
-  }
-  return sum % 2 == 0 ? "even" : "odd";
+function maskify(cc = "4556364607935616") {
+  return cc.length >= 4
+    ? cc.split("").map((x, i) => (i >= cc.length - 4 ? x : (x = "#"))).join``
+    : cc;
 }
 
-console.log(oddOrEven());
+console.log(maskify());
