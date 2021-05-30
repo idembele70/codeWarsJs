@@ -33,10 +33,16 @@
 getPositions();
  */
 
-function maskify(cc = "4556364607935616") {
-  return cc.length >= 4
-    ? cc.split("").map((x, i) => (i >= cc.length - 4 ? x : (x = "#"))).join``
-    : cc;
+function maskify(cc = "45") {
+  const lastLetterIndex = cc.length - 4;
+  let newstr = "";
+  let i = 0;
+  if (!cc.length <= 4)
+    while (lastLetterIndex > i) {
+      newstr += "#";
+      i++
+    };
+  return newstr.concat(cc.substring(lastLetterIndex));
 }
 
 console.log(maskify());
