@@ -1,6 +1,6 @@
-function validatePIN(pin = "123a") {
-  const { length } = pin;
-  return (pin.replace(/[0-9]/g,'').length == 0 && (length == 6 || length == 4));
+function validatePIN(pin = "1234") {
+  const digitLength = pin.match(/[0-9]/gi) ? pin.match(/[0-9]/gi).length : 0;
+  return (digitLength == 6 || digitLength == 4) && (pin.length == 6 || pin.length == 4);
 }
 
 console.log(validatePIN());
