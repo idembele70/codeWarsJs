@@ -1,6 +1,11 @@
-function validatePIN(pin = "1234") {
-  const digitLength = pin.match(/[0-9]/gi) ? pin.match(/[0-9]/gi).length : 0;
-  return (digitLength == 6 || digitLength == 4) && (pin.length == 6 || pin.length == 4);
+function DNAStrand(dna = "AAAA") {
+  const formatters = [
+    { pattern: /A/g, replacedBy: /T/ },
+    { pattern: /T/g, replacedBy: /A/ },
+    { pattern: /C/g, replacedBy: /G/ },
+    { pattern: /G/g, replacedBy: /C/ },
+  ];
+  return formatters.reduce((a,f) => dna.replace(f.pattern, f.replacedBy));
 }
 
-console.log(validatePIN());
+console.log(DNAStrand());
