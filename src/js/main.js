@@ -1,6 +1,10 @@
-const binaryArrayToNumber = (arr=[1,0,0,0,1,1,0]) => {
-  return arr.reverse().reduce(
-    (acc,cur,id)=>acc+=cur*Math.pow(2,id)
-  )
+function nbYear(p0=1500, percent=5,aug=100,p=5000) {
+  let i = 0
+  do {
+    p0 = p0 + p0 * percent/100 + aug;
+    i++
+  } while (p0 < p );
+  return i
 }
-console.log(binaryArrayToNumber());
+
+console.log(nbYear());
