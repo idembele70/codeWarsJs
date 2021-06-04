@@ -1,10 +1,16 @@
-function nbYear(p0=1500, percent=5,aug=100,p=5000) {
-  let i = 0
-  do {
-    p0 = p0 + p0 * percent/100 + aug;
-    i++
-  } while (p0 < p );
-  return i
+function sortVowels(s = "Codewars") {
+  const tabs = [];
+  if (s!=undefined && s.toString().match(/[a-z]/gi)) {
+    for (let i = 0; i < s.length; i++) {
+      if (s[i].match(/[aeuio]/i)) {
+        tabs.push(`|${s[i]}`);
+      } else {
+        tabs.push(`${s[i]}|`);
+      }
+    }
+    return tabs.join`\n`
+  }
+    return "";
 }
+console.log(sortVowels("Codewars"));
 
-console.log(nbYear());
