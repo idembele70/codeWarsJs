@@ -1,16 +1,11 @@
-function sortVowels(s = "Codewars") {
-  const tabs = [];
-  if (s!=undefined && s.toString().match(/[a-z]/gi)) {
-    for (let i = 0; i < s.length; i++) {
-      if (s[i].match(/[aeuio]/i)) {
-        tabs.push(`|${s[i]}`);
-      } else {
-        tabs.push(`${s[i]}|`);
-      }
-    }
-    return tabs.join`\n`
-  }
-    return "";
+function openOrSenior(
+  data = [
+    [45, 12],
+    [55, 21],
+    [19, -2],
+    [104, 20],
+  ]
+) {
+  return data.map((x) => x[0] >= 55 && (x[1] > 7 )? "Senior" : "Open");
 }
-console.log(sortVowels("Codewars"));
-
+console.log(openOrSenior());
