@@ -6,6 +6,13 @@ function openOrSenior(
     [104, 20],
   ]
 ) {
-  return data.map((x) => x[0] >= 55 && (x[1] > 7 )? "Senior" : "Open");
+    const tabs = []
+  for (let i = 0; i < data.length; i++) {
+      tabs.push(
+          data[i][0] >= 55 && data[i][1] > 7 ? "Senior" : "Open"
+      )
+      
+  }
+  return tabs
 }
 console.log(openOrSenior());
