@@ -1,16 +1,23 @@
-function sortArray(array = [1, 7]) {
-  const oddTabs = [],
-    newArray = [];
-  let i = 0;
-  array.forEach((number) => (number % 2 != 0 ? oddTabs.push(number) : null));
-  oddTabs.sort((a,b)=>a-b);
-  array.forEach((num) => {
-    if (num % 2 != 0) {
-      newArray.push(oddTabs[i]);
-      i++;
-    } else newArray.push(num);
-  });
-  return newArray;
+function humanYearsCatYearsDogYears(humanYearsCatYearsDogYears = 1) {
+  const humanYears = humanYearsCatYearsDogYears;
+  let catYears = 0;
+  let dogYears = 0;
+
+  for (let i = 1; i <= humanYears; i++) {
+    if (i == 1) {
+      catYears += 15;
+      dogYears += 15;
+    }
+   else if (i == 2) {
+      catYears += 9;
+      dogYears += 9;
+    } else {
+      catYears += 4;
+      dogYears += 5;
+    }
+  }
+
+  return [humanYears, catYears, dogYears];
 }
 
-console.log(sortArray([5, 8, 6, 3, 4]));
+console.log(humanYearsCatYearsDogYears());
