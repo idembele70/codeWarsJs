@@ -1,5 +1,5 @@
-function findSquares(num) {
-  const midInteger = (num / 2)**2;
-  return Math.ceil(midInteger) ** 2 + "-" + Math.floor(midInteger) ** 2;
-}
-console.log(findSquares(5));
+console.log(
+  (function quarterOf(month = 3) {
+    return month  %2 == 0 ? Math.floor(month  / 3) : Math.ceil(month/3)
+  })()
+);
