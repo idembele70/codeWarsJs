@@ -1,5 +1,3 @@
-console.log(
-  (function quarterOf(month = 4) {
-    return Math.ceil(month / 3)
-  })()
-);
+const sum = (numbers=[1, 5.2, 4, 0, "-1"]) => numbers.length ? numbers.reduce((acc,cur)=>acc+=cur) : 0
+
+console.log(sum());
