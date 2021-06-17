@@ -1,3 +1,8 @@
-const sum = (numbers=[1, 5.2, 4, 0, "-1"]) => numbers.length ? numbers.reduce((acc,cur)=>acc+=cur) : 0
-
-console.log(sum());
+function sum(numbers=[1, 5.2, 4, 0, -1]) {
+  let some = 0
+  for (const number of numbers) {
+    some+=number;
+  }
+  return some
+}
+console.log(sum([]));
