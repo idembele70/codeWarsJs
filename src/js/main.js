@@ -1,6 +1,5 @@
-function sumStr(a="4",b="5") {
-  a =parseInt(a)||0
-  b = parseInt(b)||0
-   return a+b+""
+function makeUpperCasse(str = "hello") {
+  return str.toLocaleUpperCase();
 }
-console.log(sumStr());
+
+console.log(makeUpperCasse());
