@@ -1,5 +1,8 @@
 function countSheep(num = 3) {
-  return [...Array(num).keys()].map(x=>`${x+1} sheep...`).join``
+  const counterOfSheep = []
+  for (let i = 0; i < num; i++) 
+    counterOfSheep.push(i+1+' sheep...')
+return counterOfSheep.join``
 }
 
 console.log(countSheep());
