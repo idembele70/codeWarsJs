@@ -1,8 +1,5 @@
-function countSheep(num = 3) {
-  const counterOfSheep = []
-  for (let i = 0; i < num; i++) 
-    counterOfSheep.push(i+1+' sheep...')
-return counterOfSheep.join``
+function closeCompare(a=3,b=5, margin=3) {
+  margin = margin == undefined  || margin < 0  ? 0 : margin ;
+  return a - b < margin && margin !=0 ? 0 : a > b ?  -1 : 1
 }
-
-console.log(countSheep());
+console.log(closeCompare());
