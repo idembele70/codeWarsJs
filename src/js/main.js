@@ -1,16 +1,20 @@
-function closeCompare(a = 2, b = 5, margin) {
-  return Math.abs(a - b) <= margin ? 0 : Math.sign(a - b)
+function getPositions(s = 3) {
+  const Step = [0, 0, 0];
+  for (let i = 0; i <= s; i++) {
+    if (i % 9 == 0 && i != 3 && i != 0) {
+      if (i % 27 == 0) Step[2] = 0;
+      else Step[2]++;
+      Step[1] = 0;
+      Step[0] = 0;
+    } else if (i % 3 == 0 && i != 0) {
+      Step[1]++;
+      Step[0] = 0;
+    } else {
+      Step[0]++;
+    }
+  }
+  return Step;
 }
-
-//without margin
-console.log(closeCompare(4, 5), -1);
-console.log(closeCompare(5, 5), 0);
-console.log(closeCompare(6, 5), 1);
-console.log(closeCompare(-6, -5), -1);
-// back to line
-console.log("\n");
-// with margin
-console.log(closeCompare(2, 5, 3), 0);
-console.log(closeCompare(8.1, 5, 3), 1);
-console.log(closeCompare(1.99, 5, 3), -1);
-console.log(closeCompare(-6460, -8422, 7606), 0);
+console.log(getPositions());
+console.log(getPositions(54));
+console.log(getPositions(98));
