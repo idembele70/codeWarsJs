@@ -1,4 +1,4 @@
-function getPositions(s = 3) {
+/* function getPositions(s = 3) {
   const Step = [0, 0, 0];
   for (let i = 0; i <= s; i++) {
     if (i % 9 == 0 && i != 3 && i != 0) {
@@ -18,3 +18,9 @@ function getPositions(s = 3) {
 console.log(getPositions());
 console.log(getPositions(54));
 console.log(getPositions(98));
+ */
+
+function sumMix(x = [9, 3, "7", "3"]) {
+  return x.map(Number).reduce((acc,c)=>acc+=c)
+}
+console.log(sumMix());
