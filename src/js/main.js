@@ -21,9 +21,9 @@ console.log(getPositions(98));
  */
 
 function sumMix(x = [9, 3, "7", "3"]) {
-  let sum = 0
+  let sum = 0 
  for (const letter of x) {
-   sum+= +letter
+   sum+= typeof letter === "string" ? +letter : letter
  }
  return sum
 }
