@@ -21,6 +21,10 @@ console.log(getPositions(98));
  */
 
 function sumMix(x = [9, 3, "7", "3"]) {
-  return x.map(Number).reduce((acc,c)=>acc+=c)
+  let sum = 0
+ for (const letter of x) {
+   sum+= +letter
+ }
+ return sum
 }
 console.log(sumMix());
