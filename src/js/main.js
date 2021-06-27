@@ -20,11 +20,9 @@ console.log(getPositions(54));
 console.log(getPositions(98));
  */
 
-function sumMix(x = [9, 3, "7", "3"]) {
-  let sum = 0 
- for (const letter of x) {
-   sum+= typeof letter === "string" ? +letter : letter
- }
- return sum
-}
-console.log(sumMix());
+console.log(
+  function(x=2, n=5) {
+    return [...Array(n).keys()]
+    .map(el=>el==0 ?el+x: el == 1 ?x+x :el*x)
+  }()
+);
