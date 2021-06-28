@@ -20,9 +20,8 @@ console.log(getPositions(54));
 console.log(getPositions(98));
  */
 
-console.log(
-  function(x=2, n=5) {
-    return [...Array(n).keys()]
-    .map(el=>el==0 ?el+x: el == 1 ?x+x :el*x)
-  }()
-);
+function removeSmallest(numbers = [1, 2, 3, 4, 5,1]) {
+  const minIndex = numbers.indexOf(Math.min(...numbers));
+  return numbers.filter((x, i) => i != minIndex);
+}
+console.log(removeSmallest());
