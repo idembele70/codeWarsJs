@@ -20,8 +20,7 @@ console.log(getPositions(54));
 console.log(getPositions(98));
  */
 
-function removeSmallest(numbers = [1, 2, 3, 4, 5,1]) {
-  const minIndex = numbers.indexOf(Math.min(...numbers));
-  return numbers.filter((x, i) => i != minIndex);
-}
-console.log(removeSmallest());
+console.log(function simpleMultiplication(number=2) {
+  return number*(number%2==0 ? 8 : 9)
+}())
+
