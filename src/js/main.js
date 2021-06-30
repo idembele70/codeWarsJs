@@ -1,5 +1,6 @@
 function spEng(sentence="english") {
- return /english/ig.test(sentence) 
+  const word = new RegExp('english', 'i')
+ return !!sentence.match(word)
 }
 
 console.log(spEng());
