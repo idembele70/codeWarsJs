@@ -1,7 +1,4 @@
-console.log(
-  (function removeEveryOther(arr = ["Hello", "Goodbye", "Hello Again"]) {
-    const res = [];
-    arr.forEach( (x,i) => (i == 0 || !(i % 2) ? res.push(x) : ''));
-    return res;
-  })()
-);
+function add(a='1', b=1) {
+  return a == b
+}
+console.log(add());
