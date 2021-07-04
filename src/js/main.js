@@ -1,4 +1,4 @@
-function add(a='1', b=1) {
-  return a == b
+function areYouPlayinBanjo(name="Adam") {
+  return !name.match(/^R/i) ? name +" does not play banjo" : name + " plays banjo"
 }
-console.log(add());
+console.log(areYouPlayinBanjo());
