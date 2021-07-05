@@ -1,7 +1,5 @@
-function areYouPlayinBanjo(name = "Adam") {
-  return (
-    `${name} ` +
-    (name.charAt(0).toLowerCase() == "r" ? "plays banjo" : "does not play banjo")
-  );
+function orderOperations() {
+  return (2 + 2) * (2 + 2) * 2;
 }
-console.log(areYouPlayinBanjo());
+console.log(orderOperations())
+console.log(" ".charCodeAt(0))
