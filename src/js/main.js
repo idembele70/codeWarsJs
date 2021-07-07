@@ -1,4 +1,6 @@
 function numberToPower(number = 4, power = 2) {
-  return Math.pow(number, power);
+  return [...Array(power)].reduce(
+    (acc,curr)=>acc*=curr || number , 1
+  );
 }
-console.log(numberToPower())
+console.log(numberToPower());
