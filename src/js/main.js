@@ -1,9 +1,5 @@
-function numberToPower(number = 4, power = 2) {
- let i =0, res = 1
-  while (i < power) {
-   res*= number
-   i++
- }
- return res
+function problem(x="hello") {
+  return typeof(x)=="string" ? "Error" : x*50+6
 }
-console.log(numberToPower());
+console.log(problem())
+console.log(problem(1))
