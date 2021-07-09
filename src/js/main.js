@@ -1,5 +1,3 @@
-function problem(x="hello") {
-  return typeof(x)=="string" ? "Error" : x*50+6
-}
-console.log(problem())
-console.log(problem(1))
+console.log(function countBy(x=2,n=5) {
+  return [...Array(n)].map((el,i)=>(i+1)*x)
+}())
