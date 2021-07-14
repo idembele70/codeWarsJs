@@ -1,17 +1,9 @@
-
-function isLeapYear(year = 2000) {
-  return year % 400==0 || year % 4==0  && year % 100 != 0}
-
-console.log(isLeapYear());
-
 console.log(
-  1984 % 100,
-  1984 % 4,
-  1984 % 400,
-  true
-)
-console.log(
-  1234 % 100,
-  1234 % 4,
-  1234 % 400, false
-)
+  function getDivisorsCnt(n = 10) {
+  let compteur = 0;
+  for (let i = 1; i < n / 2; i++) {
+    n % i == 0 ? compteur++ : null;
+  }
+  return compteur+=2
+}()
+);
