@@ -1,6 +1,4 @@
-console.log(
-  (function nthEven(n=100) {
-    return 2*(n-1)
-  })()
-);
-
+function isDivideBy(number=-12,a=2,b=-6) {
+  return !(number%a) && !( number%b)
+}
+console.log(isDivideBy())
