@@ -1,16 +1,16 @@
 function fizzbuzz(n = 3) {
-  return [...Array(n).keys()].map((number) => {
-    switch (true) {
-      case !((number+1) % 3) && !((number+1) % 5):
-        return (number = "FizzBuzz");
-      case !((number+1) % 3):
-        return (number = "Fizz");
-      case !((number+1) % 5):
-        return (number = "Buzz");
-      default:
-        return ++number;
-    }
-  });
+const fizzBuzz  = []
+for (let i = 1; i <= n; i++) {
+  if (i % 3 === 0 && i % 5===0 )
+  fizzBuzz.push("FizzBuzz")
+  else if(i%3 === 0)
+  fizzBuzz.push("Fizz")
+  else if (i %5 === 0)
+  fizzBuzz.push("Buzz")
+  else 
+  fizzBuzz.push(i)
+}
+return fizzBuzz
 }
 console.log(fizzbuzz());
 
