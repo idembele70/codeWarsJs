@@ -1,17 +1,7 @@
-function fizzbuzz(n = 3) {
-const fizzBuzz  = []
-for (let i = 1; i <= n; i++) {
-  if (i % 3 === 0 && i % 5===0 )
-  fizzBuzz.push("FizzBuzz")
-  else if(i%3 === 0)
-  fizzBuzz.push("Fizz")
-  else if (i %5 === 0)
-  fizzBuzz.push("Buzz")
-  else 
-  fizzBuzz.push(i)
-}
-return fizzBuzz
-}
-console.log(fizzbuzz());
+console.log(function mergeArrays(arr1=[1,2,3,4,4], arr2=[5,6,7,8]) {
+  return [...new Set(arr1.concat(arr2).sort(
+    (a,b)=>a-b
+  ))]
+}())
 
-
+[main] mergeArrays using set concat & sort to resolve the problem
