@@ -1,0 +1,24 @@
+{
+  "name": "codeWarsJs",
+  "version": "1.0.0",
+  "description": "code wars exercice with js Order By popuplarity. Language JS",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "start": "nodemon src/js/main.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idembele70/codeWarsJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idembele70/codeWarsJs/issues"
+  },
+  "homepage": "https://github.com/idembele70/codeWarsJs#readme"
+}
