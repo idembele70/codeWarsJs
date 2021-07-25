@@ -1,7 +1,5 @@
-function twoSort(s=["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]) {
- const array = Array.from(s.sort()[0])
- return array.join('***')
-}
-
-console.log(twoSort())
-
+console.log(
+  function powerOfTwo(n=4) {
+    return [...Array(++n).keys()].map(x=>Math.pow(2,x))
+  }()
+)
