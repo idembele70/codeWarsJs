@@ -1,4 +1,5 @@
 function mouthSize(animal="toucan") {
-  return animal === "alligator" || animal ===  "ALLIGATOR" ? "small" : "wide"
+return /ALLIGATOR/i.test(animal) ? "small" : "wide"
 }
 console.log(mouthSize())
+
