@@ -1,21 +1,24 @@
 function alphabetWar(fight = "z") {
-  const leftSide = [0,"s", "b", "p", "w"];
-  const rightSide = [0,"z", "d", "q", "m"];
-  let leftSideSum = 0,
-    rightSideSum = 0;
-
-  fight.split('').map((letter) =>
-    leftSide.indexOf(letter) !== -1
-      ? (leftSideSum += leftSide.indexOf(letter)) : 
-      rightSide.indexOf(letter) !== -1 ?
-       (rightSideSum += rightSide.indexOf(letter))
-       : ""
-  );
-  return leftSideSum > rightSideSum
-  ? "Left side wins!"
-  : leftSideSum === rightSideSum
-  ? "Let's fight again!"
-  : "Right side wins!";
+  const leftSide = ["s", "b", "p", "w"];
+  const rightSide = ["z", "d", "q", "m"];
+  let leftSum = 0;
+  let rightSum = 0;
+  for (let i = 0; i < fight.length; i++) {
+    const letter = fight[i];
+    if(leftSide.includes(letter))
+    leftSum+= leftSide.indexOf(letter) + 1
+    if(rightSide.includes(letter))
+    rightSum+= rightSide.indexOf(letter) + 1
+    else continue
+  }
+  switch(true){
+    case  leftSum > rightSum :
+    return "Left side wins!" 
+    case  leftSum < rightSum :
+    return "Right side wins!"
+    default :
+    return "Let's fight again!"
+  }
 }
 
 console.log(alphabetWar());
