@@ -1,25 +1,17 @@
-function alphabetWar(fight = "z") {
-  const leftSide = ["s", "b", "p", "w"];
-  const rightSide = ["z", "d", "q", "m"];
-  let leftSum = 0;
-  let rightSum = 0;
-  for (let i = 0; i < fight.length; i++) {
-    const letter = fight[i];
-    if(leftSide.includes(letter))
-    leftSum+= leftSide.indexOf(letter) + 1
-    if(rightSide.includes(letter))
-    rightSum+= rightSide.indexOf(letter) + 1
-    else continue
+function uefaeuro2016(teams = ["Germany", "Ukraine"], scores = [2, 0]) {
+  const homeTeam = teams[0],
+    awayTeam = teams[1];
+  const homeScore = scores[0],
+    awayScore = scores[1];
+  let result = "";
+  if (homeScore === awayScore) {
+    result = "teams played draw.";
+  } else {
+    if (homeScore > awayScore) result += homeTeam;
+    else result += awayTeam;
+    result += " won!";
   }
-  switch(true){
-    case  leftSum > rightSum :
-    return "Left side wins!" 
-    case  leftSum < rightSum :
-    return "Right side wins!"
-    default :
-    return "Let's fight again!"
-  }
+  return `At match ${homeTeam} - ${awayTeam}, ` + result;
 }
-
-console.log(alphabetWar());
+console.log(uefaeuro2016());
 
