@@ -1,10 +1,12 @@
 console.log(
   function gooseFilter(birds=["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]) {
     const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-    return birds.filter(
-      bird=>!geese.includes(bird)
+    const notGesse = [];
+     birds.forEach(
+      Onebird=> geese.indexOf(Onebird) === -1 ? notGesse.push(Onebird) : null
     )
+    return notGesse
   }()
 );
 
-// [gooseFilter] using filter and includes
+// [gooseFilter] using foreach and indexof push
