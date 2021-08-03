@@ -1,11 +1,12 @@
 console.log(
   (function pipeFix(numbers = [6, 9]) {
-    const pipeFixLength = numbers[numbers.length - 1] - numbers[0] + 1;
-    const minNumbers = numbers[0]
-    return Array(pipeFixLength).fill(minNumbers).map(
-      (number,idx)=>number+=idx
+    const lengthOfPipeFix = numbers[numbers.length - 1] - numbers[0] + 1;
+    const littleNumber = numbers[0];
+    return Array.from(
+      { length: lengthOfPipeFix },
+      (numbers, index) => littleNumber + index
     );
   })()
 );
 
-// [pipeFix] using fill Array map
+// [pipeFix] using Array from method
