@@ -1,8 +1,13 @@
-function toBinary(n=5) {
-  return parseInt(n.toString(2))
-}
-console.log(toBinary());
+console.log(
+  (function pipeFix(numbers = [6, 9]) {
+    const max = numbers[numbers.length - 1];
+    const min = numbers[0];
+    const arrayOfPipeFix = []
+    for (let i = min; i <= max; i++) {
+      if(i <= max)arrayOfPipeFix.push(i)
+    }
+    return arrayOfPipeFix
+  })()
+);
 
-/*
-[toBinary] toString with parseInt
-*/
+// [pipeFix] using for loop
