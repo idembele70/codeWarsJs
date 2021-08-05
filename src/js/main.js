@@ -1,12 +1,6 @@
 console.log(
-  (function pipeFix(numbers = [6, 9]) {
-    const lengthOfPipeFix = numbers[numbers.length - 1] - numbers[0] + 1;
-    const littleNumber = numbers[0];
-    return Array.from(
-      { length: lengthOfPipeFix },
-      (numbers, index) => littleNumber + index
-    );
-  })()
+  function all(arr=[1,2,3,4,5,10],fun= function(v){return v<9}) {
+  return arr.every(fun)   
+  }()
 );
 
-// [pipeFix] using Array from method
