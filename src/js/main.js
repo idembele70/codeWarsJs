@@ -1,14 +1,13 @@
-console.log(
-  function mulpileOfIndex(array= [68, -1, 1, -7, 10, 10])
-  {
-    const arrayOfMultipleOfIndex = []
-    for (let i = 0; i < array.length; i++) {
-      const number = array[i]
-      if(number % i === 0)
-      arrayOfMultipleOfIndex.push(number)
+function sum(digits="3433") {
+  let tabs = []
+  return digits.split('').reduce(
+    (acc,cur)=>{
+      tabs.push()
+      acc+ +cur,0
     }
-    return arrayOfMultipleOfIndex
-  }()
+  )
+}
+console.log(
+  sum()
 )
-// [multipleOfIndex] using for and push
-
+//[sum] encour
