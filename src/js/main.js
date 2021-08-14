@@ -1,16 +1,16 @@
-function sum(digits="1056653001858539") {
+function sum(digits="") {
   const tabs = []
  let sum  = 0
- if(digits.length) return digits
+ if(!digits.length) return"0 = 0"
  digits.split('').forEach(
     (num)=>{
-      tabs.push(num)
+      tabs.push(num ? num : 0)
       sum+= parseInt(num)
     }
-  )
+    )
   return `${tabs.join` + `} = ${sum}`
 }
 console.log(
   sum()
 )
-// encour
+// [sum] triying to find error
