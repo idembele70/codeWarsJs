@@ -1,16 +1,6 @@
-function sum(digits="") {
-  const tabs = []
- let sum  = 0
- if(!digits.length) return"0 = 0"
- digits.split('').forEach(
-    (num)=>{
-      tabs.push(num ? num : 0)
-      sum+= parseInt(num)
-    }
-    )
-  return `${tabs.join` + `} = ${sum}`
-}
 console.log(
-  sum()
+  function isDigit(s="-234.4") {
+    return parseInt(s)
+  }()
 )
-// [sum] triying to find error
+// [isDigit] triying
