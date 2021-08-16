@@ -1,6 +1,6 @@
 console.log(
   function isDigit(s="-234.4") {
-    return parseInt(s)
+    return parseFloat(s) == s || parseInt(s) == s
   }()
 )
-// [isDigit] triying
+// [isDigit] using parsefloat et parseint
