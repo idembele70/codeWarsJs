@@ -1,6 +1,11 @@
-console.log(
-  function isDigit(s="-234.4") {
-    return parseFloat(s) == s || parseInt(s) == s
-  }()
-)
-// [isDigit] using parsefloat et parseint
+function sum(digits="64323") {
+  if(digits === undefined) return ""
+  else {
+  const sum = " = "+  [...digits].reduce(
+    (acc,cur)=>acc+ parseInt(cur),0
+  )
+  return [...digits].join` + ` + sum
+  }
+}
+console.log(sum())
+// [sum] using toString join reduce
