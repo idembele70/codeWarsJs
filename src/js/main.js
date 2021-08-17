@@ -1,11 +1,8 @@
-function sum(digits="64323") {
-  if(digits === undefined) return ""
-  else {
-  const sum = " = "+  [...digits].reduce(
-    (acc,cur)=>acc+ parseInt(cur),0
-  )
-  return [...digits].join` + ` + sum
-  }
+String.prototype.toAlternatingCase = function () {
+  return [...this].map(letter=>
+    letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase()).join('')
 }
-console.log(sum())
-// [sum] using toString join reduce
+
+console.log("hello worlD".toAlternatingCase());
+
+// [toAlternatingCase] using lowerCase upperCase Map ....
