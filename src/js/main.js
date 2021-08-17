@@ -1,8 +1,15 @@
 String.prototype.toAlternatingCase = function () {
-  return [...this].map(letter=>
-    letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase()).join('')
+  let alternatedString = ""
+  for (let i = 0; i < this.length; i++) {
+    const currentLetter = this.charAt(i);
+    if(currentLetter === currentLetter.toUpperCase())
+    alternatedString += currentLetter.toLowerCase()
+    else
+    alternatedString += currentLetter.toUpperCase()
+  }
+  return alternatedString
 }
 
 console.log("hello worlD".toAlternatingCase());
 
-// [toAlternatingCase] using lowerCase upperCase Map ....
+// [toAlternatingCase] using for
