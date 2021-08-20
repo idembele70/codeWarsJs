@@ -1,8 +1,8 @@
 console.log(
   function name(s="!hi!!") {
-    return s.replace(/!*$/,"")
+    return s.replace(/!+$/,"")
   }()
 );
-// [name] using regex with *
+// [name] using regex with +
 
 
