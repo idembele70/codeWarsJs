@@ -1,6 +1,8 @@
-function hexToDec(hexString="a") {
-  return parseInt(hexString,16)
-}
+console.log(
+  function name(s="!hi!!") {
+    return s.replace(/!{1,}$/,"")
+  }()
+);
+// [name] using regex with {1,}
 
-console.log(hexToDec());
-// [hexToDec] using parseint
+
