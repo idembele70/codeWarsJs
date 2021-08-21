@@ -1,7 +1,8 @@
 function isPalindrome(x="aA") {
-  return x.toLowerCase() == x.toLowerCase().split('').reverse().join``
+  const xRegex = new RegExp(x,"ig")
+  return xRegex.test([...x].reverse().join(""))
 }
 console.log(isPalindrome());
-// [isPalindrome] using tolowercase split reverse and join
+// [isPalindrome] using regex
 
 
