@@ -1,8 +1,8 @@
-function isPalindrome(x="aA") {
-  const xRegex = new RegExp(x,"ig")
-  return xRegex.test([...x].reverse().join(""))
-}
-console.log(isPalindrome());
-// [isPalindrome] using regex
+console.log(
+  function preFizz(n=[1]) {
+    return `Array should be from ${n[0]} to ${n[n.length-1]}`
+  }()
+);
+// [preFizz] using length
 
 
