@@ -1,8 +1,10 @@
 console.log(
-  function preFizz(n=[1]) {
-    return `Array should be from ${n[0]} to ${n[n.length-1]}`
+  function preFizz(n=2) {
+    return Array(n).fill(1).map(
+      (value,idx)=>value+idx
+    )
   }()
 );
-// [preFizz] using length
+// [preFizz] using array fill map
 
 
