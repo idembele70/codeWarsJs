@@ -1,10 +1,8 @@
 console.log(
   function preFizz(n=2) {
-    return Array(n).fill(1).map(
-      (value,idx)=>value+idx
-    )
+    return Array.from({length : n}, (_value, idx)=>++idx)
   }()
 );
-// [preFizz] using array fill map
+// [preFizz] using array.from 
 
 
