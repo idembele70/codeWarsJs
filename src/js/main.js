@@ -1,25 +1,14 @@
-function getPlanetName(id=2) {
-
-    switch(id){
-      case 1:
-        return 'Mercury'
-      case 2:
-        return 'Venus'
-      case 3:
-        return 'Earth'
-      case 4:
-        return 'Mars'
-      case 5:
-        return 'Jupiter'
-      case 6:
-        return 'Saturn'
-      case 7:
-        return 'Uranus'
-      case 8:
-        return 'Neptune'
-    }
+function getPlanetName(id = 2) {
+  const tabs =  ["","Mercury", 'Venus',
+    'Earth',
+    'Mars',
+    'Jupiter',
+    'Saturn',
+    'Uranus',
+    'Neptune']
+  return tabs[id]
 }
 console.log(getPlanetName())
-// [getPlanet] using switch and return  
+// [getPlanet] Array
 
 
