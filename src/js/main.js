@@ -1,18 +1,11 @@
-function getPlanetName(id = 4) {
-  const planet =  {
-     "Mercury": 1,
-     "Venus": 2,
-     "Earth": 3,
-     "Mars": 4,
-     "Jupiter": 5,
-     "Saturn": 6,
-     "Uranus": 7,
-     "Neptune": 8}
-  return Object.keys(planet).find(
-    key=>planet[key] === id
-  )
-}
-console.log(getPlanetName())
-// [getPlanet] object key find
+console.log(
+  function colorOf(r=255,g=0,b=0){
+    const red = (r.toString(16).length === 1 ? "0" : "") + r.toString(16)
+    const green = (g.toString(16).length === 1 ? "0" :"") + g.toString(16)
+    const blue =  (b.toString(16).length === 1 ? "0" :"") + b.toString(16)
+    return `#${red}${green}${blue}`
+  }()
+);
+// [colorOf] using toString
 
 
