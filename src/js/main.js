@@ -1,5 +1,6 @@
-function shortenToDate(longDate="Friday May 2, 9am") {
-  return longDate.split(/,.+/).join``
-}
-console.log(shortenToDate());
-// [shortenToDate] using split
+console.log(
+  function joinString(string1="string1", string2="string2"){
+    return string1.toString().concat(" ", string2)
+  }()
+);
+// [joinString] using concat
