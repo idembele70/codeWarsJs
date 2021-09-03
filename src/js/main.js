@@ -1,7 +1,10 @@
 console.log(
-  function findMultiples(integer=5,limit=7) {
-    return Array.from({length : Math.floor(limit/integer)}, (_value,idx)=>integer * ++idx)
+  function findMultiples(integer=5,limit=25) {
+    const length = limit / integer
+    const ArrayLength = length.toString().split('.')[0]
+    return [...Array(+ArrayLength)].map(
+      (value,idx)=>integer * idx + integer
+    )
   }()
   );
-// [findMultiples] W/ Array from
-
+// [findMultiples] W/ Array & destructure
