@@ -1,9 +1,10 @@
 console.log(
-  function Ship(draft=20,crew=0) {
-    this.draft = draft
-    this.crew = crew
-    this.isWorthIt = ()=> draft > 20 && crew === 0
-    return this.isWorthIt()
-  }()
+  function calculator(a=1,b=2,sign="+") {
+  if(typeof a === "string" || typeof b === "string" || !["-","+","*",'/'].includes(sign) )
+  return "unknown value"
+  else 
+  return eval(`${a}${sign}${b}`)  
+} ()
 );
-// [Ship] making
+
+//  [calculator] usign typeof includes and eval
