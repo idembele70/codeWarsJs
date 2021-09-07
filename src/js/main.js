@@ -1,13 +1,17 @@
-const reducer = (array,power) => {
-  return array.reduce(
-    (acc,cur)=>acc + cur ** power, 0
-  )
-}
+
 
 function arrayMadness(a=[4,5,6],b=[1,2,4]) {
-  return reducer(a,2) > reducer (b,3)
+let sumOfA = 0
+let sumOfB = 0
+for (const number of a) {
+  sumOfA += Math.pow(number,2)
+}
+for (const number of b) {
+  sumOfB += Math.pow(number,3)
+}
+return sumOfA > sumOfB
 }
 
 console.log(arrayMadness());
 
-//  [reducer] usign reduce and two function
+// [reducer] usign for of
