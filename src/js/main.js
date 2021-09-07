@@ -1,21 +1,13 @@
-console.log(
-  function calculator(a = 1, b = 2, sign = "+") {
-    if (typeof a === "string" || typeof b === "string")
-      return "unknown value"
-    else
-      switch (sign) {
-        case "+":
-          return a + b
-        case "-":
-          return a - b
-        case "*":
-          return a * b
-        case "/":
-          return a / b
-        default:
-          return "unknown value"
-      }
-  }()
-);
+const reducer = (array,power) => {
+  return array.reduce(
+    (acc,cur)=>acc + cur ** power, 0
+  )
+}
 
-//  [calculator] usign typeof switch
+function arrayMadness(a=[4,5,6],b=[1,2,4]) {
+  return reducer(a,2) > reducer (b,3)
+}
+
+console.log(arrayMadness());
+
+//  [reducer] usign reduce and two function
