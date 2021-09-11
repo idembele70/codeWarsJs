@@ -1,7 +1,10 @@
 console.log(
   function between(a=1,b=4) {
-    return Array.from({length : ++b - a},
-      (number,idx)=>1 * idx + a)
+    const betweenArray = []
+    for (let i = a, c = b; i <= c; i++) {
+      betweenArray.push(i)
+    }
+    return betweenArray
   }()
 );
-// [between] using Array from
+// [between] using for iteration
