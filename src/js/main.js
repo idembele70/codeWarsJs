@@ -1,8 +1,7 @@
 console.log(
   function between(a=1,b=4) {
-    return Array(b+1-a).fill(a).map(
-      (number,idx)=>number+idx
-    )
+    return Array.from({length : ++b - a},
+      (number,idx)=>1 * idx + a)
   }()
 );
-// [between] using Array & map functions
+// [between] using Array from
