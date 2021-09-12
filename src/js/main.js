@@ -1,10 +1,5 @@
-console.log(
-  function between(a=1,b=4) {
-    const betweenArray = []
-    for (let i = a, c = b; i <= c; i++) {
-      betweenArray.push(i)
-    }
-    return betweenArray
-  }()
-);
-// [between] using for iteration
+function unusualFive() {
+  return String.fromCharCode(53)
+}
+console.log(unusualFive());
+// [unusualFive] using String from char code
