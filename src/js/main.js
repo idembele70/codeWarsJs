@@ -1,6 +1,8 @@
 console.log(
   function solution(a="45", b="1") {
-    return a.length < b.length ? `${a}${b}${a}` : `${b}${a}${b}`
+    const {length : aLength} = a
+    const {length} = b
+    return aLength < length ? a.concat(b,a) : b.concat(a,b)
   }()
 );
-// [solution] using ternary
+// [solution] using destructuration, concat
