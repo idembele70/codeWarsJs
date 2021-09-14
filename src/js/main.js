@@ -1,8 +1,5 @@
-console.log(
-  function solution(a="45", b="1") {
-    const {length : aLength} = a
-    const {length} = b
-    return aLength < length ? a.concat(b,a) : b.concat(a,b)
-  }()
-);
-// [solution] using destructuration, concat
+function oddCount(n=15023) {
+  return n % 2 ? Math.floor(n / 2) : n / 2
+}
+console.log(oddCount());
+// [oddCount] using return function
