@@ -1,5 +1,6 @@
-function oddCount(n=15023) {
-  return n % 2 ? Math.floor(n / 2) : n / 2
-}
-console.log(oddCount());
-// [oddCount] using return function
+console.log(
+  function strCount(str="hello",letter="p") {
+    return [...str].filter(strLetter=> strLetter === letter).length
+  }()
+);
+// [strCount] using filter
