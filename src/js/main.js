@@ -1,6 +1,12 @@
 console.log(
-  function shortcut(string="codewars") {
-    return string.replace(/[aeuio]/g, "")
+  function shortcut(string = "codewArs") {
+    return [...string].filter(
+      vowelsFinder
+    ).join``
   }()
 );
-// [shortcut] using replace and regex
+function vowelsFinder(char="") {
+  const vowels = ["a", "e", "u", "i", "o"]
+  return vowels.indexOf(char) === -1
+}
+// [shortcut] filter and two functions
