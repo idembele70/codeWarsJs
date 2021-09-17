@@ -1,12 +1,13 @@
 console.log(
   function shortcut(string = "codewArs") {
-    return [...string].filter(
-      vowelsFinder
-    ).join``
+    let StringWOutVowels = ""
+    for (const letter of string) {
+      if (!(/a|e|u|i|o/.test(letter)))
+        StringWOutVowels += letter
+      else continue
+    }
+    return StringWOutVowels
   }()
 );
-function vowelsFinder(char="") {
-  const vowels = ["a", "e", "u", "i", "o"]
-  return vowels.indexOf(char) === -1
-}
-// [shortcut] filter and two functions
+
+// [shortcut] for iteration
