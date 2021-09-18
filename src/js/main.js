@@ -1,13 +1,5 @@
-console.log(
-  function shortcut(string = "codewArs") {
-    let StringWOutVowels = ""
-    for (const letter of string) {
-      if (!(/a|e|u|i|o/.test(letter)))
-        StringWOutVowels += letter
-      else continue
-    }
-    return StringWOutVowels
-  }()
-);
-
-// [shortcut] for iteration
+function binToDec(bin=10) {
+  return parseInt(bin, 2)
+}
+console.log(binToDec());
+// [binToDec] parseInt with his radix
