@@ -1,8 +1,6 @@
 console.log(
-  function billboard(name = "Jeong-Ho Aristotelis", price = "30") {
-    return Array(name.length).fill(1).reduce(
-      acc=>acc+price||30,0
-    )
+  function billboard(name = "Jeong-Ho Aristotelis", price = 30) {
+    return Array.from({ length: name.length }, (v) => v = price || 30).reduce((acc, c) => acc + c, 0)
   }()
 );
-// [billboard] using Array and fill
+// [billboard] using Array FROM and REDUCE
