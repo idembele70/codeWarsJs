@@ -1,14 +1,6 @@
-function binToDec(bin=10) {
-   bin = bin.toString()
-  const convertedNumbers = []
-  for (let i = bin.length; i > 0; i--) {
-    const currentNumber = bin[i-1]
-    const convertedNumber = currentNumber * Math.pow(2,bin.length - i)
-   convertedNumbers.push(convertedNumber)
-  }
-  return convertedNumbers.reduce(
-    (sum,currentVal)=>sum+currentVal
-  )
-}
-console.log(binToDec());
-// [binToDec] for iteration
+console.log(
+  function billboard(name = "Jeong-Ho Aristotelis", price = "30") {
+    return eval(name.length + String.fromCharCode(42) +price || 30)
+  }()
+);
+// [billboard] eval function, with String fromCharCode
