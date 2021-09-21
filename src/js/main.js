@@ -1,6 +1,12 @@
-function add(n=1) {
-  return (addToN)=>n+addToN
-}
-const addOne = add(4)
-console.log(addOne(2));
-// [add] using func in func
+console.log(
+  function countWords(str = `Arthur 
+  David
+ Nelson 
+   Hello Gomer  
+   Hello     Bart  `) {
+    return str.trim().split(/\s{1,}/).filter(
+      (word,idx,thisArray)=>thisArray.indexOf(word) === idx
+    ).length
+  }()
+);
+// [countWords] using trim filter 
