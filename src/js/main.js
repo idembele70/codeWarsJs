@@ -1,12 +1,10 @@
-console.log(
-  function countWords(str = `Arthur 
-  David
- Nelson 
-   Hello Gomer  
-   Hello     Bart  `) {
-    return str.trim().split(/\s{1,}/).filter(
-      (word,idx,thisArray)=>thisArray.indexOf(word) === idx
-    ).length
-  }()
-);
-// [countWords] using trim filter 
+function correctTail(bod="Fox", tail="x") {
+  const sub = bod.substr(bod.length - tail.length)
+  if (sub === tail)
+    return true
+  else
+    return false
+}
+
+console.log(correctTail())
+// [correctTail] using substr
