@@ -1,10 +1,7 @@
-function correctTail(bod="Fox", tail="x") {
-  const sub = bod.substr(bod.length - tail.length)
-  if (sub === tail)
-    return true
-  else
-    return false
-}
-
-console.log(correctTail())
-// [correctTail] using substr
+console.log(
+  function _if(bool = false, func1 = () => console["log"](true), func2 = () => console["log"](false)) {
+    if (bool) return func1()
+    return func2()
+  }()
+);
+// [_if] using if condition
