@@ -1,10 +1,15 @@
 console.log(
   function name(name = "johN") {
-    if(name){ name + "!"
-    name = name.toLowerCase()
-    name = name.replace(name.charAt(0), v=>v.toUpperCase())
-     }
-    return "Hello, " + (name || "World")+"!"
+    const ArrayName = []
+    if(name)
+    for (let i = 0; i < name.length; i++) {
+      if(i === 0){
+        ArrayName.push(name[i].toUpperCase())
+      } else {
+        ArrayName.push(name[i].toLowerCase())
+      }
+    }
+    return `Hello, ${ArrayName.join`` || "World"}!`
   }()
 )
-// [name] using regex condition replace
+// [name] using for iteration
