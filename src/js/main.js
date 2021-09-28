@@ -1,15 +1,8 @@
-console.log(
-  function name(name = "johN") {
-    const ArrayName = []
-    if(name)
-    for (let i = 0; i < name.length; i++) {
-      if(i === 0){
-        ArrayName.push(name[i].toUpperCase())
-      } else {
-        ArrayName.push(name[i].toLowerCase())
-      }
-    }
-    return `Hello, ${ArrayName.join`` || "World"}!`
-  }()
-)
-// [name] using for iteration
+function twoHighest(arr = [4, 10, 10, 9]) {
+  return arr.sort(
+    (a, b) => a - b
+  ).filter((element, idx, arr) => arr.indexOf(element) === idx).slice(-2)
+}
+const result = twoHighest()
+console.log(result.reverse());
+// [twoHighest] using for array sorting filter indexOf slice
