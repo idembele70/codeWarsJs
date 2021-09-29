@@ -1,8 +1,11 @@
-function twoHighest(arr = [4, 10, 10, 9]) {
-  return arr.sort(
-    (a, b) => a - b
-  ).filter((element, idx, arr) => arr.indexOf(element) === idx).slice(-2)
+function twoHighest(arr = [20, 17, 17,18]) {
+  const arrSorted = arr.filter(
+    (x,i,array)=>array.indexOf(x) === i 
+  ).sort(
+    (a,b)=>a-b
+  )
+  return arrSorted.slice(-2).reverse()
 }
 const result = twoHighest()
-console.log(result.reverse());
-// [twoHighest] using for array sorting filter indexOf slice
+console.log(result);
+// [twoHighest] using filter sort slice
