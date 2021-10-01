@@ -1,6 +1,6 @@
 console.log(
   function square(number=3) {
-    return number ** 2
-  }
+    return Math.pow(number,2)
+  }()
 );
-// [square] using ** operator
+// [square] using pow from math classes
