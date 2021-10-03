@@ -1,13 +1,13 @@
-function htmlspecialchars(formData = "Hello, how would you &amp; I fare?") {
+function htmlspecialchars(formData = "<h2>Hello World</h2>") {
   const data = {
-    "&lt;": "<",
-    "&gt;": ">",
-    "& quot;": "\"",
-    "&amp;": "&"
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "&": "&amp;"
   }
-  return formData.split(' ').map(
+  return formData.split('').map(
     word=>data[word] || word
-  )
+  ).join('')
 }
-console.log(htmlspecialchars().join(' '));
-// [htmlspecialChars] trying
+console.log(htmlspecialchars());
+// [htmlspecialChars] using object split map and join
