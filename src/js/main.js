@@ -1,7 +1,7 @@
 console.log(
   function sayHello(name="Mr. Spock") {
-    return `Hello, ${name}`
+    return "Hello, "+name
   }
 );
-// [sayHello] using string template
+// [sayHello] using string concactenation
 
