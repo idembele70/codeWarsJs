@@ -1,6 +1,8 @@
 function removeChars(s=".tree1 A") {
-  return s.replace(/[^a-z ]/ig, "")
+  return [...s].filter(
+    letter=>/[a-z]| /ig.test(letter)
+  ).join``
 }
 console.log((removeChars()));
-// [removeChars] using regex replace 
+// [removeChars] using regex test, destructuring, join and filter function
 
