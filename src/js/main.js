@@ -1,8 +1,11 @@
 function removeChars(s=".tree1 A") {
-  return [...s].filter(
-    letter=>/[a-z]| /ig.test(letter)
-  ).join``
+  const keepedChars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+  let res = ""
+  for (const letter of s) {
+    if(keepedChars.indexOf(letter) != -1)res+=letter
+  }
+  return res
 }
 console.log((removeChars()));
-// [removeChars] using regex test, destructuring, join and filter function
+// [removeChars] using constante, let, forof iteration indexOf function and string concactenation
 
