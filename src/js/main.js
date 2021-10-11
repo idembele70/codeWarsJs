@@ -1,11 +1,12 @@
-function removeChars(s=".tree1 A") {
-  const keepedChars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-  let res = ""
-  for (const letter of s) {
-    if(keepedChars.indexOf(letter) != -1)res+=letter
-  }
-  return res
-}
-console.log((removeChars()));
-// [removeChars] using constante, let, forof iteration indexOf function and string concactenation
+console.log(
+  function evenOrOdd(str="12") {
+    let oddSum = 0, evenSum = 0
+    str.split('').forEach(
+      number=>number % 2 ? oddSum += +number : evenSum += +number
+    )
+    return oddSum === evenSum ? "Even and Odd are the same" : 
+    evenSum > oddSum ? "Even is greater than Odd": "Odd is greater than Even"
+  }()
+);
+// [evenOrOdd] using split foreach and ternary
 
