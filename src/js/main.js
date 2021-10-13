@@ -1,13 +1,14 @@
-function is_square(arr=[1,4,9,16]) {
-for (let i = 0; i < arr.length; i++) {
-  const number = arr[i]
-  const numberSqrt = Math.sqrt(number)+" "
-  if (numberSqrt.match(/\./ig)) {
-    return false
-  }
+console.log(
+  function strong(n=145) {
+    return [...n.toString()].map(
+      factorielle
+    ).reduce((acc,curr)=>acc+curr,0) === n ? "STRONG!!!!" : "Not Strong !!" 
+  }()
+);
+function factorielle(n) {
+  return Array(+n).fill(1).reduce(
+    (acc,curr,idx)=>acc*(idx+curr),1
+  )
 }
-return arr.length ? true : undefined
-}
-console.log(is_square());
-// [is_square] using for iteration sqrt regex match and ternary
+// [strong] using toString, rest function inside function map reduce array and fill
 
