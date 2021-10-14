@@ -1,14 +1,19 @@
 console.log(
-  function strong(n=145) {
-    return [...n.toString()].map(
-      factorielle
-    ).reduce((acc,curr)=>acc+curr,0) === n ? "STRONG!!!!" : "Not Strong !!" 
+  function strong(n = 145) {
+    let factorielleSum = 0
+    for (let i = 0; i < `${n}`.length; i++) {
+      factorielleSum += factorielle(`${n}`.charAt(i))
+    }
+    if(factorielleSum === n )return "STRONG!!!!"
+    return "Not Strong !!"
   }()
 );
 function factorielle(n) {
-  return Array(+n).fill(1).reduce(
-    (acc,curr,idx)=>acc*(idx+curr),1
-  )
+  let factorielleNumber = 1
+  for (let i = 1; i <= +n; i++) {
+    const number = n[i]
+    factorielleNumber *= i
+  }
+  return factorielleNumber
 }
-// [strong] using toString, rest function inside function map reduce array and fill
-
+// [strong] using string template for iteration, charAt function, function inside function and if statement
