@@ -1,19 +1,7 @@
-console.log(
-  function strong(n = 145) {
-    let factorielleSum = 0
-    for (let i = 0; i < `${n}`.length; i++) {
-      factorielleSum += factorielle(`${n}`.charAt(i))
-    }
-    if(factorielleSum === n )return "STRONG!!!!"
-    return "Not Strong !!"
-  }()
-);
-function factorielle(n) {
-  let factorielleNumber = 1
-  for (let i = 1; i <= +n; i++) {
-    const number = n[i]
-    factorielleNumber *= i
+function stray(numbers=[1,1,2]) {
+  for (const number of numbers) {
+    if(numbers.lastIndexOf(number) === numbers.indexOf(number)) return number
   }
-  return factorielleNumber
 }
-// [strong] using string template for iteration, charAt function, function inside function and if statement
+console.log(stray());
+// [stray] using forof iteration lastIndexOf and indexOf iterration 
