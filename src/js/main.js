@@ -1,7 +1,14 @@
-function stray(numbers=[1,1,2]) {
-  return Number(numbers.filter(
-    (number, idx)=> numbers.lastIndexOf(number) === idx && numbers.indexOf(number) === idx
-  ).join``)
-}
-console.log(stray());
-// [stray] using Number classes filter lastIndexOf indexOf & logic and join function
+console.log(
+  function validateHello(greetings = "ahoj") {
+   return [
+      "hello",
+      "ciao",
+      "salut",
+      "hallo",
+      "hola",
+      "ahoj",
+      "czesc",
+    ].find(x=>greetings.toLowerCase().match(x.toLowerCase())) ? true : false
+  }()
+);
+// [validateHello] using array find match lowercase and ternary
