@@ -1,6 +1,6 @@
 console.log(
   function doubleChar(str="abcd") {
-    return str.replace(/./ig,(v)=>v+v)
+    return str.replace(/./ig,"$&".repeat(2))
   }()
 );
-// [doubleChar] using replace w regex and function inside replace
+// [doubleChar] using replace w regex and repeat
