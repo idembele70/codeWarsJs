@@ -1,6 +1,6 @@
 console.log(
   function doubleChar(str="abcd") {
-    return str.replace(/./ig,"$&".repeat(2))
+    return [...str].map(letter=>letter.repeat(2)).join``
   }()
 );
-// [doubleChar] using replace w regex and repeat
+// [doubleChar] using restfull map repeat and join
