@@ -5,9 +5,8 @@ var b == "Lab"
 var name == a + b
 
 // TO
-var a = "dev"
-var b = "Lab"
+const a = "dev"
+const b = "Lab"
 
-var name = a + b
-
-// [grasshoper]  t
+const name = `${a}${b}`
+// [grasshoper]  using template string
