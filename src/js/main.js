@@ -1,6 +1,10 @@
 console.log(
   function reverseList(list = [1, 2, 3, 4]) {
-return list.reverse()
+    const listReversed = []
+    for (const number of list) {
+      listReversed.unshift(number)
+    }
+    return listReversed
   }()
 );
-// [reverseList] using reverse function
+// [reverseList] using forOf iteration and unshift function
