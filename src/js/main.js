@@ -1,10 +1,9 @@
 console.log(
   function reverseList(list = [1, 2, 3, 4]) {
-    const listReversed = []
-    for (const number of list) {
-      listReversed.unshift(number)
-    }
-    return listReversed
+    const { length: listLength } = list
+    return Array(listLength).fill(1).map(
+      (_, idx) => list[listLength - ++idx]
+    )
   }()
 );
-// [reverseList] using forOf iteration and unshift function
+// [reverseList] using Array fill map destruction of Object and Array Classes
