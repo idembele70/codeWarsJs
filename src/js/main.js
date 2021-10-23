@@ -1,9 +1,7 @@
 console.log(
   function reverseList(list = [1, 2, 3, 4]) {
     const { length: listLength } = list
-    return Array(listLength).fill(1).map(
-      (_, idx) => list[listLength - ++idx]
-    )
+    return Array.from({length : listLength},(_number,idx)=>list[listLength - idx - 1])
   }()
 );
-// [reverseList] using Array fill map destruction of Object and Array Classes
+// [reverseList] using Array from destructuration and function inside array from
