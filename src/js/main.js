@@ -5,7 +5,7 @@ console.log(
       const number = list[i]
       newLists.push(number)
     }
-    return newList
+    return newLists
   }()
 );
 // [reverseList] using for iteration, const variable, push function from array
