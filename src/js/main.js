@@ -1,11 +1,9 @@
-console.log(
-  function reverseList(list = [1, 2, 3, 4]) {
-    const newLists = []
-    for (let i = list.length; i > 0; i++) {
-      const number = list[i]
-      newLists.push(number)
-    }
-    return newLists
-  }()
-);
-// [reverseList] using for iteration, const variable, push function from array
+function getEvenNumbers(numbersArray=[1,2,3]) {
+  const filtered = []
+   numbersArray.forEach(
+    number=>number % 2 ===0 && filtered.push(number)
+  )
+  return filtered
+}
+console.log(getEvenNumbers());
+// [getEvenNumbers] using forEach iteration
