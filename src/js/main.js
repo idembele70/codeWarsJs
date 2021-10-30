@@ -1,11 +1,4 @@
-function solution(string = "camelCasing") {
-  let stringCamelCased = ""
-  for (const char of string) {
-    if (char.match(/[A-Z]/))
-    stringCamelCased += ` ${char}`
-    else
-    stringCamelCased += char
-  }
-  return stringCamelCased
+function testEven(n=0) {
+  return !(n % 2)
 }
-// [solution] using for iteration regex let variable template string
+// [testEven] using modulo operation and boolean convertor
