@@ -1,16 +1,8 @@
-function solve(s="cODE") {
-  const lower = [], upper=[]
-   s.split('').forEach(
-    letter=>letter.match(/[a-z]/) ? lower.push(letter): upper.push(letter)
-  )
-  switch (true) {
-    case lower.length < upper.length:
-      return s.toUpperCase()
-    case lower.length > upper.length:
-      return s.toLowerCase()
-    default:
-      return s.toLowerCase()
+console.log(
+  function distinct(a=[1,1,2]) {
+    return a.filter(
+      (number,idx,newArr)=>newArr.indexOf(number) === idx
+    )
   }
-}
-console.log(solve());
-// [solve] using split foreach match push toUpperCase ToLowerCase functions and switch condition
+);
+// [distinct] using Array filter, indexOf function 
