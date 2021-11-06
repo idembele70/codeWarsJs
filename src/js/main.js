@@ -1,12 +1,6 @@
-function filterString(value = "123a") {
-  const filteredString = []
-  for (let n = 0; n < value.length; n++) {
-    const number = +value[n]
-    if(Number.isInteger(number))
-    filteredString.push(number)
-    
+console.log(
+  function isDivisibe(n=3,x=1,y=1) {
+    return !(n % x) && !(n % y)
   }
-  return Number(filteredString.join``)
-}
-console.log(filterString());
-// [filterString] using const variable for iteration Number classes isinteger push and join functions
+);
+// [isDisivisble] using return ternary and codition reverse with !
