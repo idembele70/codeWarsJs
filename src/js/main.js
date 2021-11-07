@@ -1,5 +1,5 @@
-function switchItUp(number=1) {
-  const numbers= {
+function switchItUp(number = 1) {
+  return  numbers= {
     0: "Zero",
     1: "One",
     2: "Two",
@@ -10,8 +10,7 @@ function switchItUp(number=1) {
     7: "Seven",
     8: "Eight",
     9: "Nine"
-  }
-  return numbers[number]
+  }[number]
 }
 console.log(switchItUp());
 // [switchItUp] using using object
