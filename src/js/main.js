@@ -1,7 +1,9 @@
-console.log(
-  function greaterThanLessThan(a=-9,b=-8, c=-7) {
-    return a < b < c
-  }()
-);
+blackBox()
+console?.log(blackBox())
+JSopenSesame()
 
-// [greaterThanLessThan] < sign
+// [blackBox] guessing !
+
+/* 
+PAUL 
+*/
