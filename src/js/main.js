@@ -1,5 +1,15 @@
 function generateShape(integer=8) {
-  return Array.from({length : integer}, ()=>"+".repeat(integer)).join(`\n`)
+  const square = []
+  for (let i = 0; i < integer; i++) {
+    let line = ""
+    for (let j = 0; j < integer; j++) {
+      line += "+"
+    }
+    if(i + 1 != integer)
+    line+= "\n"
+    square.push(line)
+  }
+  return square.join('')
 }
 console.log(generateShape());
-// [generateShape] using Array Class fill map repeat and join function
+// [generateShape] using const and let variable, for iteration, push join functions
