@@ -1,11 +1,10 @@
 console.log(
   function divisions(n=6,divisor=2) {
-   let count = 0
-    while(n > divisor){
-      n /= divisor
-      count++
-    }
-    return count 
+   let numberOfDivisions = 0
+   for (let i = n; i > divisor;numberOfDivisions++) {
+     i = i / divisor
+   }
+   return numberOfDivisions
   }()
 );
-// [divisions] using let variable while iteration divisor self asigment
+// [divisions] using let variable for iteration
