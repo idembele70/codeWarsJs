@@ -1,15 +1,11 @@
-function generateShape(integer=8) {
-  const square = []
-  for (let i = 0; i < integer; i++) {
-    let line = ""
-    for (let j = 0; j < integer; j++) {
-      line += "+"
+console.log(
+  function divisions(n=6,divisor=2) {
+   let count = 0
+    while(n > divisor){
+      n /= divisor
+      count++
     }
-    if(i + 1 != integer)
-    line+= "\n"
-    square.push(line)
-  }
-  return square.join('')
-}
-console.log(generateShape());
-// [generateShape] using const and let variable, for iteration, push join functions
+    return count 
+  }()
+);
+// [divisions] using let variable while iteration divisor self asigment
