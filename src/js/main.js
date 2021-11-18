@@ -1,5 +1,7 @@
-console.log(function sortme(names=["one", "two", "three"]){
-return names.sort()
-}());
-// [sortme] using sort function from Array classes
-console.log("zer"["rez".indexOf("z")])
+function add(n) {
+  return (a)=>!Number.isNaN(a) ? +n : n
+}
+const addOne = add(1)
+addOne(3)
+console.log(addOne(2));
+// [add] using Number class isNan function 
