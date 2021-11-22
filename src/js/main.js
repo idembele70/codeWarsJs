@@ -1,7 +1,8 @@
-function add(n) {
-  return (a)=>+a +n
-}
-const addOne = add(1)
-addOne(3)
-console.log(addOne(2));
-// [add] using function inside return 
+console.log(
+  function vowelsCount(str="abracadabra") {
+    const tabs = []
+     str.split('').forEach(elt =>elt.match(/[aeuio]/ig) && tabs.push(elt))
+     return tabs.length
+  }()
+);
+// [vowelsCount] using constante variable, split forEach match
