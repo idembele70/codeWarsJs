@@ -1,8 +1,8 @@
-console.log(
-  function vowelsCount(str="abracadabra") {
-    const tabs = []
-     str.split('').forEach(elt =>elt.match(/[aeuio]/ig) && tabs.push(elt))
-     return tabs.length
-  }()
-);
-// [vowelsCount] using constante variable, split forEach match
+function highAndLow(numbers="1 2 3 6") {
+  numbers = numbers.split(' ').sort(
+    (a,b)=>b-a
+  )
+  return numbers[0]+" "+ numbers.reverse()[0]
+}
+console.log(highAndLow());
+// [highAndLow] using split sort and reverse function
