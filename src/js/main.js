@@ -1,8 +1,8 @@
-function highAndLow(numbers="1 2 3 6") {
-  numbers = numbers.split(' ').sort(
-    (a,b)=>b-a
-  )
-  return numbers[0]+" "+ numbers.reverse()[0]
-}
-console.log(highAndLow());
-// [highAndLow] using split sort and reverse function
+console.log(
+  function validatePIN(pin="1234") {
+    const {length} = pin.replace(/\D/ig,"")
+    if(length!=pin.length)return false
+      return 4 === length || length === 6
+  }()
+)
+// [validatePIN] using destructuration replace functions if conditions and return function
