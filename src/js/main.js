@@ -5,4 +5,4 @@ console.log(
       return 4 === length || length === 6
   }()
 )
-// [validatePIN] using destructuration replace functions if conditions and return functions
+// [validatePIN] using destructuration replace functions if conditions and return funcs
