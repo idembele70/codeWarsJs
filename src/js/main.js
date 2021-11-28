@@ -1,8 +1,5 @@
-console.log(
-  function validatePIN(pin="1234") {
-    const {length} = pin.replace(/\D/ig,"")
-    if(length!=pin.length)return false
-      return 4 === length || length === 6
-  }()
-)
-// [validatePIN] using destructuration replace functions if conditions and return funcs
+function addFive(num=5) {
+  const total = num + 5
+  return total
+}
+// [addFive] using const variable and addition
