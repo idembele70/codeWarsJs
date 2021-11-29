@@ -1,6 +1,9 @@
 function getDivisorsCnt(n=4) {
-  return [...Array(n)].map((_,idx)=>++idx).filter(
-    (x)=>n % x === 0).length
+  let length = 0
+  for (let i = 1; i <= n; i++) {
+    if(n%i === 0) length++ 
+  }
+  return length
 }
 console.log(getDivisorsCnt());
-// [getDivisorsCnt] using map Arry classes filter and length functions
+// [getDivisorsCnt] using let variable concactenation and for iteration
