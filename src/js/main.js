@@ -101,14 +101,12 @@ function subtractSum(n = 10) {
     99: "apple",
     100: "pineapple",
   }
-  while (true) {
+  do {
     n -= n.toString().split('').reduce(
-      (acc, cur) => acc + +cur,0
+      (acc, cur) => acc + +cur, 0
     )
-    if (fruits[n])
-      return fruits[n]
-        ;
-  }
+  } while (!fruits[n]);
+  return fruits[n]
 }
 console.log(subtractSum());
-// [substractSum] using toString split reduce while iteration and if condition
+// [substractSum] using toString split reduce doWhile iteration and if condition
