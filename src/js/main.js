@@ -1,6 +1,14 @@
 console.log(
   function solution(string="camelCasing") {
-    return string.replace(new RegExp(/([A-Z])/,"g"), ' $1')
+    newString = ""
+    for (let i = 0; i < string.length; i++) {
+      const letter = string[i];
+      if(/[A-Z]/.test(letter))
+      newString +=` ${letter}`
+      else
+      newString+= letter
+    }
+    return newString
   }()
 );
-// [solution] using regex memoization and replace functions
+// [solution] using for iteration if condition and regex test
