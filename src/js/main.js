@@ -1,13 +1,8 @@
-function removeSmallest(numbers = [1, 2, 3, 4, 5, 1]) {
-  const min = Math.min(...numbers)
-  for (const number of numbers) {
-    if(min === number){
-      numbers.splice(numbers.indexOf(number),1)
-      break;
-    }
-    
-  }
-  return numbers
-}
-console.log(removeSmallest());
-// [removeSmallest] trying
+console.log(
+  function grid(N=14) {
+    return [...Array(N)].map(
+      (_,i)=>Array.from({length:N},()=>String.fromCharCode(97+i+ 1)).join("\n")
+    )
+  }()
+);
+// [grid] trying
