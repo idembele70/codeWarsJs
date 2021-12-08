@@ -1,8 +1,18 @@
 console.log(
-  function grid(N=14) {
+  function grid(N=26) {
     return [...Array(N)].map(
-      (_,i)=>Array.from({length:N},()=>String.fromCharCode(97+i+ 1)).join("\n")
-    )
+      (_,i)=>{
+        return Array.from({length:N},(_,j)=>{
+          let currentPos = 97 + i
+        currentPos+=j
+        if(currentPos > 122){
+          currentPos -= 122
+         return String.fromCharCode(currentPos)
+        } else
+        return String.fromCharCode(currentPos)
+      }).join(" ")}
+    ).join('\n')
   }()
 );
+
 // [grid] trying
