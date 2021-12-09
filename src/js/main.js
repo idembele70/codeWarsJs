@@ -1,4 +1,4 @@
-console.log(
+/* console.log(
   function grid(N=26) {
     return [...Array(N)].map(
       (_,i)=>{
@@ -13,6 +13,11 @@ console.log(
       }).join(" ")}
     ).join('\n')
   }()
-);
+); */
 
 // [grid] trying
+function sortme(names=["one","two","three"]) {
+  return names.sort()
+}
+
+// [sortme] using Array sort function
