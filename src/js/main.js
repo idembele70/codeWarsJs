@@ -1,23 +1,7 @@
-/* console.log(
-  function grid(N=26) {
-    return [...Array(N)].map(
-      (_,i)=>{
-        return Array.from({length:N},(_,j)=>{
-          let currentPos = 97 + i
-        currentPos+=j
-        if(currentPos > 122){
-          currentPos -= 122
-         return String.fromCharCode(currentPos)
-        } else
-        return String.fromCharCode(currentPos)
-      }).join(" ")}
-    ).join('\n')
-  }()
-); */
-
-// [grid] trying
-function sortme(names=["one","two","three"]) {
-  return names.sort()
+function getSum(a = -1, b = 2) {
+  return Array.from({ length: a + b + 1 }, (v, i) => a + i)/*  .reduce(
+    (acc, cur) => acc + cur, 0
+  )*/
 }
-
-// [sortme] using Array sort function
+console.log(getSum());
+// [getSum] trying
