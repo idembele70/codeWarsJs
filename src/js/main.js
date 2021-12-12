@@ -10,9 +10,8 @@ console.log(
       return "result should be negative"
     } else if (lhsIndex - rhsIndex === 0) {
       return 0
-    } else {
-      return "result should be positive"
     }
+      return "result should be positive"
   }()
 );
 // [getSum] done
