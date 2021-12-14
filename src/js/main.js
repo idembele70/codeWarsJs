@@ -1,5 +1,5 @@
 function toCamelCase(str="the_stealth_warrior") {
-  return str.split(/[_-]/).map((x,i)=>i!=0 && x.replace(x[0],v=>v.toUpperCase()) || x).join('')
+  return str.replace(/_./ig,v=>v[1].toUpperCase())
 }
 console.log(toCamelCase());
-// [tocamelCase] using split map replace toUpperCase && join functions
+// [tocamelCase] using replace and uppercase functions
