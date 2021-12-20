@@ -1,9 +1,5 @@
-function isSquare(arr = [9, 4, 9, 16]) {
-  for (const number of arr) {
-    const { sqrt } = Math
-    if (/[.]/.test(sqrt(number))) return false
-  }
-  return true
+function isSquare(arr = [9, 3, 9, 16]) {
+  return !arr.filter(x=>Math.sqrt(x).toString().includes(".")).length
 }
 console.log(isSquare());
-// [isSquare] using every sqrt match
+// [isSquare] using filter sqrt toString includes
