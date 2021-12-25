@@ -1,8 +1,13 @@
-console.log(
-  function median(array = [33, 99, 100, 30, 29, 50]) {
-    array = array.sort((a, b) => a -b)
-    const { length } = array
-    return length % 2 !== 0 ? array[(length -1) / 2] : (array[length / 2] + array[length / 2 -1])/2
-  }()
-);
-// [median] using sort destructuring object
+const arr = [1, 2, 4]
+const arr2 = [2, 4, 3, 5]
+const m = (n) => n+1
+const n = m(arr2.length)
+const array = new Array(n).fill(1).map(
+  (x,idx)=>x+idx
+)
+for (let i = 0; i < array.length; i++) {
+  const element = array[i];
+  console.log(arr[element])
+}
+
+// [codinggame exo] trying
