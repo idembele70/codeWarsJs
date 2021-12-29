@@ -1,9 +1,9 @@
-console.log(
-  function isIsogram(str="Dermatoglyphics") {
-  return [...str].every(
-     (letter,_,arr)=>arr.indexOf(letter) === arr.lastIndexOf(letter)
-   )
-  }()
-);
+function printerError(s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz") {
+  return [...s].filter(
+    x => x > "m"
+  ).length+"/"+s.length
+}
 
-// [isIsogram] trying
+console.log(printerError());
+
+// [printerError] using rest filter function and length method
