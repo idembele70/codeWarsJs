@@ -1,9 +1,14 @@
-function printerError(s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz") {
-  return [...s].filter(
-    x => x > "m"
-  ).length+"/"+s.length
-}
+console.log(
+  function solution(number=10) {
+    const arr = []
+    for (let i = 0; i < number; i++) {
+      if (i % 3 === 0 || i % 5 === 0)
+        arr.push(i)
+    }
+    return arr.reduce(
+      (acc, cur) => acc += cur, 0
+    )
+  }()
+);
 
-console.log(printerError());
-
-// [printerError] using rest filter function and length method
+// [solution] usingfor iteration array push and reduce
