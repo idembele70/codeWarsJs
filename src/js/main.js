@@ -1,14 +1,10 @@
-console.log(
-  function solution(number=10) {
-    const arr = []
-    for (let i = 0; i < number; i++) {
-      if (i % 3 === 0 || i % 5 === 0)
-        arr.push(i)
-    }
-    return arr.reduce(
-      (acc, cur) => acc += cur, 0
-    )
-  }()
-);
-
-// [solution] usingfor iteration array push and reduce
+function filter_list(l=[1,2,"O","123"]) {
+  const filteredL = []
+  for (const iterator of l) {
+    if(typeof(iterator) === "number")
+    filteredL.push(iterator)
+  }
+  return filteredL
+}
+console.log(filter_list());
+// [solution] using const varaible forof typeof array push function
