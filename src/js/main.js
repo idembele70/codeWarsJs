@@ -1,10 +1,10 @@
 function filter_list(l=[1,2,"O","123"]) {
-  const filteredL = []
-  for (const iterator of l) {
-    if(typeof(iterator) === "number")
-    filteredL.push(iterator)
-  }
-  return filteredL
+  const filteredList = []
+  l.forEach(element => {
+    if(typeof element !== "string")
+    filteredList.push(element)
+  });
+  return filteredList
 }
 console.log(filter_list());
-// [solution] using const varaible forof typeof array push function
+
