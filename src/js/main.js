@@ -1,9 +1,8 @@
-console.log(
-  function descenginOrder(n = 1234) {
-    return +[...n.toString()].sort(
-      (a, b) => b - a
-    ).join('')
-  }()
-);
+function toCamelCase(str="the_stealth-warior") {
+  return str.replace(/_.|-./ig, v=>v[1].toUpperCase())
+}
+console.log(toCamelCase());
 
-// [descenginOrder] using toString sort join and + operator to make string number
+
+
+// [toCamelCase] using replace function & toUpperCase
