@@ -1,8 +1,10 @@
-function toCamelCase(str="the_stealth-warior") {
-  return str.replace(/_.|-./ig, v=>v[1].toUpperCase())
-}
-console.log(toCamelCase());
+console.log(
+  function findNextSqure(sq=121) {
+    const sqrt = Math.sqrt(sq)
+    if(Number.isInteger(sqrt))
+    return (sqrt +1) ** 2
+    return -1
+  }()
+);
 
-
-
-// [toCamelCase] using replace function & toUpperCase
+// [findNextSqure] using math sqrt number isInteger and return funciton
