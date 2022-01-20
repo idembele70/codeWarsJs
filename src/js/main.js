@@ -1,10 +1,13 @@
 console.log(
-  function findNextSqure(sq=121) {
-    const sqrt = Math.sqrt(sq)
-    if(Number.isInteger(sqrt))
-    return (sqrt +1) ** 2
-    return -1
-  }()
+ function getMiddle(s="teest") {
+   let middle = []
+   const { length } = s;
+   if(length % 2)
+  middle = s[(length-1) / 2]
+   else
+   middle = s[length / 2 - 1] + s[length / 2]
+   return middle
+ }()
 );
 
-// [findNextSqure] using math sqrt number isInteger and return funciton
+// [getMiddle] using destructuring length and return
