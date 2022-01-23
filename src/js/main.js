@@ -1,13 +1,6 @@
-console.log(
- function getMiddle(s="teest") {
-   let middle = []
-   const { length } = s;
-   if(length % 2)
-  middle = s[(length-1) / 2]
-   else
-   middle = s[length / 2 - 1] + s[length / 2]
-   return middle
- }()
-);
+const squareSum = (numbers = [1, 2]) => numbers?.map(number=> number ** 2).reduceRight((acc, cur) => acc + cur, 0)
+  ;
+console.log(squareSum());
 
-// [getMiddle] using destructuring length and return
+
+// [squareSum] using map function regduceRight and arrow function
