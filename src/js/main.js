@@ -1,6 +1,12 @@
-const squareSum = (numbers = [1, 2]) => numbers?.map(number=> number ** 2).reduceRight((acc, cur) => acc + cur, 0)
+const squareSum = ((numbers = [1, 2]) => {
+  let sum = 0
+  for (const number of numbers) {
+    sum += number ** 2
+  }
+  return sum
+})()
   ;
-console.log(squareSum());
+console.log(squareSum);
 
 
-// [squareSum] using map function regduceRight and arrow function
+// [squareSum] using forof iteration
