@@ -1,13 +1,10 @@
 console.log(
   function sortByBit(array=[30,0]) {
-    let sum = 0
-    for (let i = 0; i < array.length; i++) {
-      const number = array[i];
-      sum+= 2**number
-    }
-    return sum
+    return array.map(el=>2**el).reduceRight(
+      (a,c)=>a+=c,0
+    )
   }()
 );
 
 
-// [sortByBit] using reduce iteration math pow 
+// [sortByBit] using map iteration and reduceRight map
