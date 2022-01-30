@@ -1,12 +1,10 @@
-const squareSum = ((numbers = [1, 2]) => {
-  let sum = 0
-  for (const number of numbers) {
-    sum += number ** 2
-  }
-  return sum
-})()
-  ;
-console.log(squareSum);
+console.log(
+  function sortByBit(array=[30,0]) {
+    return array.reduce(
+      (accumulator,current)=>accumulator += Math.pow(2,current),0
+    )
+  }()
+);
 
 
-// [squareSum] using forof iteration
+// [sortByBit] using reduce iteration math pow 
