@@ -4,15 +4,15 @@ var list1 = [
   { firstName: 'Ramon', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby' },
   { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
 ];
-console.log(function countLanguages(list=list1) {
-  const counter = {}
-  for (const listItem of list) {
-    const { language } = listItem;
-    if(counter[language])
-    counter[language] +=1
-    else
-    counter[language] = 1
-  }
-  return counter
+console.log(function countLanguages(list = list1) {
+  return list.reduce((previous, {language}) => {   
+    if (previous[language]){
+       previous[language] += 1
+    }
+    else{
+      previous[language] = 1
+    }
+    return previous
+  }, {})
 }())
-// [countLanguages] using const object forof iteration if else statement
+// [countLanguages] using reduce function from array async
