@@ -1,5 +1,7 @@
 function digitize(n=123) {
-  return [...n.toString()].map(Number)
+  return Array((n+"").length).fill(1).map(
+    (_,idx)=>+n.toString()["charAt"](idx)
+  )
 }
 console.log(digitize());
-// [digitize] using tostring and Number class
+// [digitize] using toString charAt
