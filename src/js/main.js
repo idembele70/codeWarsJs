@@ -1,5 +1,10 @@
 function reverseWords(str="Hello world!") {
-  return str.split(' ').reverse().join` `
+  str = str.split(' ')
+  const newStr = []
+  for (const word of str) {
+    newStr.unshift(word)
+  }
+  return newStr.join` `
 }
 console.log(reverseWords())
-// [reverseWords] using split reverse and join
+// [reverseWords] using split forof iteration and join
