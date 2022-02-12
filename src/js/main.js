@@ -1,7 +1,5 @@
-function digitize(n=123) {
-  return Array((n+"").length).fill(1).map(
-    (_,idx)=>+n.toString()["charAt"](idx)
-  )
+function reverseWords(str="Hello world!") {
+  return str.split(' ').reverse().join` `
 }
-console.log(digitize());
-// [digitize] using toString charAt
+console.log(reverseWords())
+// [reverseWords] using split reverse and join
