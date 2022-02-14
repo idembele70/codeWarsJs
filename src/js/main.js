@@ -1,6 +1,6 @@
 console.log(
   (function numberToString(num=78) {
-    return `${num}`
+    return num+"" 
   })()
 )
-// [numberToString] using template string
+// [numberToString] using string addition
