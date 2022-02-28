@@ -1,11 +1,12 @@
-const isVeryEvenNumber = (n = 5) => {
-  while (n.toString().length > 1) {
-    n = [...n.toString()].reduce(
-      (acc, cur) => acc + +cur, 0
-    )
+console.log(function getDivisorsCnt(n=10){
+  const divisors = [1,];
+  let i = 2;
+  while (i <=n) {
+    if(n % i === 0) divisors.push(i)
+    i++
   }
-  return +n % 2 === 0
-}
-console.log(isVeryEvenNumber())
+  return divisors.length
+}()
+)
 
-// 
+// [getDivisorsCnt] using while push
