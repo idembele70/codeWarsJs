@@ -1,12 +1,9 @@
-console.log(function getDivisorsCnt(n=10){
-  const divisors = [1,];
-  let i = 2;
-  while (i <=n) {
-    if(n % i === 0) divisors.push(i)
-    i++
+function getEvenNumbers(numbersArray=[ 0,28,15,83,85,27,81,74,50]) {
+  for (const index in numbersArray) {
+    if(numbersArray[index] % 2)
+    numbersArray.splice(index,1,undefined)
   }
-  return divisors.length
-}()
-)
-
-// [getDivisorsCnt] using while push
+  return numbersArray.filter(x=>x !== undefined)
+}
+console.log(getEvenNumbers())
+// [getDivisorsCnt] using filter and forin iteration
