@@ -1,5 +1,7 @@
 function solution(string="camelCasing") {
-  return string.replace(/[A-Z]/g, match=>` ${match}`)
+  return [...string].map(
+    x=>/[A-Z]/.test(x) ? ` ${x}` : x
+  ).join('')
 }
 console.log(solution())
-// [solution] using replace, regex and template string
+// [solution] using destructuring map regex test and join
