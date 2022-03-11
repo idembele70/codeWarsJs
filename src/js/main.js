@@ -1,6 +1,8 @@
 console.log(
-  function add(n) {
-    return v=>v+n
+  function friend(friends=["Ryan", "Kieran", "Mark"]) {
+    return friends.filter(
+      ({length})=>length === 4
+    )
   }()
 )
-// [add] trying
+// [friend] using filter function
