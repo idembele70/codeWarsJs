@@ -1,7 +1,7 @@
-function filterLongWord(sentence,n) {
-  return sentence.split(' ').filter(
-    word=>word.length > n 
+function filterLongWord(sentence, n) {
+  return sentence.split` `.filter(
+    ({ length }) => length > n
   )
 }
 console.log(filterLongWord())
-// [filterLongWord] using split and filter functions
+// [filterLongWord] using split, template string in split and filter functions, destructuring
