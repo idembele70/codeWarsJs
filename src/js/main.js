@@ -1,5 +1,6 @@
-function palindrome(num="-451") {
-  return typeof num === "number" && num >=0 ?parseInt(`${num}`.split("").reverse().join("")) === num  :"Not valid"
-}
-console.log(palindrome())
-// [filterLongWord] using split, template string in split and filter functions, destructurind, and in conditions
+console.log(
+  function reverseWords(str="double  spaced  words") {
+    return str.split('').reverse().join('').split(' ').reverse().join(' ')
+  }()
+)
+// [filterLongWord] using split reverse and join
