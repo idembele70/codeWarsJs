@@ -1,5 +1,5 @@
 const getAge = (inputString="4 years old") => { 
-  return parseInt(inputString) 
+  return +inputString
  }
  console.log(getAge())
-// [getAge] using parseInt
+// [getAge] using parseInt with +
