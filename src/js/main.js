@@ -1,6 +1,5 @@
-console.log(
-  function reverseWords(str="double  spaced  words") {
-    return str.split('').reverse().join('').split(' ').reverse().join(' ')
-  }()
-)
-// [filterLongWord] using split reverse and join
+const getAge = (inputString="4 years old") => { 
+  return parseInt(inputString) 
+ }
+ console.log(getAge())
+// [getAge] using parseInt
