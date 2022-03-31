@@ -1,5 +1,5 @@
 const getAge = (inputString="4 years old") => { 
-  return +inputString
+  return +inputString.replace(/\D/ig,"")
  }
  console.log(getAge())
-// [getAge] using parseInt with +
+// [getAge] using + and replace regex
