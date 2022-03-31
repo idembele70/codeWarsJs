@@ -1,5 +1,5 @@
 const getAge = (inputString="4 years old") => { 
-  return +inputString.replace(/\D/ig,"")
+  return Number(inputString.replace(/\D/ig,""))
  }
  console.log(getAge())
-// [getAge] using + and replace regex
+// [getAge] using Number Classes and replace regex
