@@ -1,5 +1,7 @@
-const getAge = (inputString="4 years old") => { 
-  return Number(inputString.replace(/\D/ig,""))
- }
- console.log(getAge())
-// [getAge] using Number Classes and replace regex
+console.log(
+  function sortArray(array=[5, 3, 2, 8, 1, 4]) {
+   return array.sort((a,b)=> a % 2 === 0 ?a : a - b)
+
+  }()
+);
+// [getAge] trying
